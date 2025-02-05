@@ -9,17 +9,27 @@ $font_body: 'Apercu';
 }
 
 @mixin body_large {
-    @include body(34px);
+    @include body(36px);
 }
 
 @mixin body_medium {
-    @include body(22px);
+    @include body(24px);
 }
 
 @mixin body_small {
     @include body(18px);
 }
 
+section {
+    a {
+        text-decoration: underline;
+        text-decoration-color: lightcoral;
+    }
+
+    a:hover {
+        color: $color_hover ;
+    }
+}
 
 
 
