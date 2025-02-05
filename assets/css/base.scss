@@ -9,11 +9,12 @@
 @import 'layout';
 
 /* page */
-@import 'about';
 @import 'index';
-
+@import 'about';
+@import 'work';
 
 /* organisms */
 @import 'header';
 @import 'footer';
 
+/* sass --watch base.scss style.css */
