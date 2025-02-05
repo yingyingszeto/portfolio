@@ -1,7 +1,11 @@
+$page-wide: 1200px;
+$page-medium: 1000px;
+$page-small: 800px;
+
 body {
     display: grid;
     grid-template-rows: 6% auto 20%;
-    grid-template-columns: 1fr 800px 1fr;
+    grid-template-columns: 1fr $page-wide 1fr;
     grid-template-areas:
     "header header header"
     ". section ."
@@ -24,7 +28,7 @@ header {
 
 section {
     grid-area: section;
-} 
+}
   
 #section-index {
     display: grid;
@@ -45,6 +49,7 @@ section {
 
 #gridContainer_intro {
     grid-area: gridContainer_intro;
+    margin: 0 10%;
 }
 
 #gridContainer_project {
@@ -55,6 +60,6 @@ section {
     row-gap: 30px;
 }
 
+/* work */
 footer { grid-area: footer; }
-
 
