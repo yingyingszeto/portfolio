@@ -2,17 +2,20 @@
   font-family: "Cosi Azure";
   src: url("CosiAzure-Bold.woff"), url("CosiAzure-Bold.woff") format("opentype");
   font-weight: bold;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: "Apercu";
   src: url("Apercu-Bold.woff"), url("Apercu-Bold.otf") format("opentype");
   font-weight: bold;
-  font-style: normal; }
+  font-style: normal;
+}
 @font-face {
   font-family: "Apercu";
   src: url("Apercu-Light.woff"), url("Apercu-Light.otf") format("opentype");
   font-weight: 300;
-  font-style: normal; }
+  font-style: normal;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -35,37 +38,46 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 /* -------- added by me -------- */
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:visited, a:active, a:link, a:hover {
-  color: inherit; }
+  color: inherit;
+}
 
 /* style */
 /*
@@ -74,193 +86,337 @@ $accent_2: #71F0EA;
 $accent_3: #C31162;
 */
 /* body */
+section a {
+  text-decoration: underline;
+  text-decoration-color: lightcoral;
+}
+section a:hover {
+  color: #999999;
+}
+
+.background-color {
+  background-color: #EDEFEA;
+}
+
 body {
   display: grid;
   grid-template-rows: 6% auto 20%;
-  grid-template-columns: 1fr 800px 1fr;
-  grid-template-areas: "header header header" ". section ." "footer footer footer"; }
-  @media only screen and (max-width: 800px) {
-    body {
-      grid-template-columns: 1fr 80% 1fr;
-      grid-template-rows: 10% auto 16%; } }
-  @media only screen and (max-width: 600px) {
-    body {
-      grid-template-columns: 1fr 90% 1fr; } }
-  @media only screen and (max-width: 414px) {
-    body {
-      grid-template-rows: 11% auto 5%; } }
+  grid-template-columns: 1fr 1200px 1fr;
+  grid-template-areas: "header header header" ". section ." "footer footer footer";
+}
+@media only screen and (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-rows: 10% auto 16%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    grid-template-columns: 1fr 90% 1fr;
+  }
+}
+@media only screen and (max-width: 414px) {
+  body {
+    grid-template-rows: 11% auto 5%;
+  }
+}
 
 header {
-  grid-area: header; }
+  grid-area: header;
+}
 
 section {
-  grid-area: section; }
+  grid-area: section;
+}
 
 #section-index {
   display: grid;
   grid-template-rows: 2.4fr 8fr;
-  grid-template-areas: "gridContainer_intro" "gridContainer_project"; }
-  @media only screen and (max-width: 800px) {
-    #section-index {
-      grid-template-rows: 2.4fr 8fr; } }
-  @media only screen and (max-width: 414px) {
-    #section-index {
-      grid-template-rows: 2.4fr 6fr; } }
-  @media only screen and (max-width: 414px) {
-    #section-index {
-      grid-template-rows: 2fr 5fr; } }
+  grid-template-areas: "gridContainer_intro" "gridContainer_project";
+}
+@media only screen and (max-width: 800px) {
+  #section-index {
+    grid-template-rows: 2.4fr 8fr;
+  }
+}
+@media only screen and (max-width: 414px) {
+  #section-index {
+    grid-template-rows: 2.4fr 6fr;
+  }
+}
+@media only screen and (max-width: 414px) {
+  #section-index {
+    grid-template-rows: 2fr 5fr;
+  }
+}
 
 #gridContainer_intro {
-  grid-area: gridContainer_intro; }
+  grid-area: gridContainer_intro;
+  margin: 0 10%;
+}
 
 #gridContainer_project {
   grid-area: gridContainer_project;
   display: grid;
   grid-template-rows: auto 1fr 1fr 1fr;
-  row-gap: 30px; }
+  row-gap: 30px;
+}
 
+/* work */
 footer {
-  grid-area: footer; }
+  grid-area: footer;
+}
 
 /* page */
-.background-color {
-  background-color: #EDEFEA; }
-
-#section-about {
-  font: 34px "Apercu";
+#section-index {
+  text-align: center;
+  width: 800px;
+  margin: auto;
+}
+#section-index img {
+  width: 100%;
+}
+#section-index div#gridContainer_intro {
+  font: 36px "Apercu";
   font-weight: 300;
   color: #000000;
-  text-align: inherit; }
-  #section-about a {
-    text-decoration: underline;
-    text-decoration-color: lightcoral; }
-  #section-about a:hover {
-    color: #999999; }
-  #section-about h1 {
-    font: 34px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    padding: 5% 0;
-    font-weight: 600; }
-  #section-about p {
-    font: 22px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 180%;
-    margin-bottom: 3%; }
-
-section {
-  text-align: center; }
-  section img {
-    width: 100%; }
-  section div#gridContainer_intro {
-    font: 34px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 147%;
-    margin: auto; }
-    section div#gridContainer_intro span {
-      font-weight: 600; }
-    @media only screen and (max-width: 475px) {
-      section div#gridContainer_intro {
-        font-size: 8vw; } }
-    section div#gridContainer_intro #social {
-      margin-top: 5%; }
-      @media only screen and (max-width: 320px) {
-        section div#gridContainer_intro #social {
-          margin-top: 9%; } }
-      section div#gridContainer_intro #social a {
-        font: 34px "Apercu";
-        font-weight: 300;
-        color: #000000;
-        color: #000000;
-        padding: 3%; }
-        @media only screen and (max-width: 600px) {
-          section div#gridContainer_intro #social a {
-            font-size: 30px; } }
-        @media only screen and (max-width: 320px) {
-          section div#gridContainer_intro #social a {
-            font-size: 8vw; } }
-        section div#gridContainer_intro #social a :hover {
-          color: #999999;
-          transition: all ease .3s; }
-  section div#gridContainer_project {
-    font: 22px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    margin: auto;
-    /* -------- hover effect -------- */ }
-    @media only screen and (max-width: 400px) {
-      section div#gridContainer_project {
-        font-size: 20px; } }
-    @media only screen and (max-width: 320px) {
-      section div#gridContainer_project {
-        font-size: 17px; } }
-    section div#gridContainer_project svg {
-      width: 18px;
-      margin-left: 8px;
-      -moz-animation: bounce 2s infinite;
-      -webkit-animation: bounce 2s infinite;
-      animation: bounce 2s infinite;
-      -webkit-animation-name: bounce;
-      animation-name: bounce;
-      -webkit-transform-origin: center bottom;
-      transform-origin: center bottom; }
+  line-height: 147%;
+  margin: auto;
+}
+#section-index div#gridContainer_intro span {
+  font-weight: 600;
+}
+@media only screen and (max-width: 475px) {
+  #section-index div#gridContainer_intro {
+    font-size: 8vw;
+  }
+}
+#section-index div#gridContainer_intro #social {
+  margin-top: 5%;
+}
+@media only screen and (max-width: 320px) {
+  #section-index div#gridContainer_intro #social {
+    margin-top: 9%;
+  }
+}
+#section-index div#gridContainer_intro #social a {
+  font: 36px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  color: #000000;
+  padding: 3%;
+}
+@media only screen and (max-width: 600px) {
+  #section-index div#gridContainer_intro #social a {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #section-index div#gridContainer_intro #social a {
+    font-size: 8vw;
+  }
+}
+#section-index div#gridContainer_intro #social a :hover {
+  color: #999999;
+  transition: all ease 0.3s;
+}
+#section-index div#gridContainer_project {
+  font: 24px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  margin: auto;
+  /* -------- hover effect -------- */
+}
+@media only screen and (max-width: 400px) {
+  #section-index div#gridContainer_project {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #section-index div#gridContainer_project {
+    font-size: 17px;
+  }
+}
+#section-index div#gridContainer_project svg {
+  width: 18px;
+  margin-left: 8px;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
 @keyframes bounce {
-  from,
-            20%,
-            53%,
-            80%,
-            to {
+  from, 20%, 53%, 80%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     -webkit-transform: translate3d(0, 3px, 0);
-    transform: translate3d(0, 3px, 0); }
+    transform: translate3d(0, 3px, 0);
+  }
   90% {
     -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     -webkit-transform: translate3d(0, -3px, 0);
-    transform: translate3d(0, -3px, 0); } }
-    section div#gridContainer_project .image-wrapper {
-      position: relative; }
-    section div#gridContainer_project .image-hover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity .4s ease-out;
-      cursor: url("https://raw.githubusercontent.com/yingyingszeto/forLinks/master/cursor.svg"), auto; }
-    section div#gridContainer_project .image-hover:hover {
-      opacity: 1; }
+    transform: translate3d(0, -3px, 0);
+  }
+}
+#section-index div#gridContainer_project .image-wrapper {
+  position: relative;
+}
+#section-index div#gridContainer_project .image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+  cursor: url("https://raw.githubusercontent.com/yingyingszeto/forLinks/master/cursor.svg"), auto;
+}
+#section-index div#gridContainer_project .image-hover:hover {
+  opacity: 1;
+}
+
+#section-about {
+  font: 36px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  text-align: inherit;
+}
+#section-about h1 {
+  font: 36px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  padding: 5% 0;
+  font-weight: 600;
+}
+#section-about p {
+  font: 24px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 180%;
+  margin-bottom: 3%;
+}
+
+.title-text {
+  font: 24px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 155%;
+}
+
+.text {
+  font: 18px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 155%;
+}
+
+body {
+  font: 18px "Apercu";
+  font-weight: 300;
+  color: #000000;
+}
+
+img {
+  width: 100%;
+}
+
+.gridContainer_work {
+  display: grid;
+  justify-content: center;
+  gap: 5%;
+  padding: 10px;
+}
+
+.gridContainer_work > div {
+  height: auto;
+}
+
+.col-2 {
+  padding: 4% 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: auto;
+  width: 1000px;
+  line-height: 155%;
+}
+.col-2 img.gif {
+  width: 100%;
+}
+
+.col-3 {
+  padding: 4% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  width: 800px;
+  text-align: center;
+  line-height: 155%;
+}
+
+.font-title {
+  font: 36px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  padding: 4% 0;
+  font-weight: bold;
+  text-align: center;
+  line-height: 155%;
+}
+
+.paragraph-description {
+  padding: 4% 0;
+  width: 800px;
+  margin: auto;
+}
+
+.paragraph {
+  padding: 4% 0;
+  width: 800px;
+  line-height: 155%;
+  margin: auto;
+}
 
 /* organisms */
 header {
-  width: 100%; }
-  header a:hover {
-    color: #999999;
-    transition: all ease .3s; }
+  width: 100%;
+}
+header a:hover {
+  color: #999999;
+  transition: all ease 0.3s;
+}
+header #brand-logo {
+  font: 32px "Cosi Azure";
+  line-height: 128%;
+  padding: 10px;
+  float: left;
+}
+@media only screen and (max-width: 800px) {
   header #brand-logo {
-    font: 32px "Cosi Azure";
-    line-height: 128%;
-    padding: 10px;
-    float: left; }
-    @media only screen and (max-width: 800px) {
-      header #brand-logo {
-        font: 26px "Cosi Azure"; } }
-    @media only screen and (max-width: 374px) {
-      header #brand-logo {
-        font: 6.7vw "Cosi Azure"; } }
-  header nav {
-    font: 18px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    padding: 10px;
-    float: right; }
-    header nav a {
-      margin-left: 30px; }
-      @media only screen and (max-width: 374px) {
-        header nav a {
-          margin-left: 20px; } }
+    font: 26px "Cosi Azure";
+  }
+}
+@media only screen and (max-width: 374px) {
+  header #brand-logo {
+    font: 6.7vw "Cosi Azure";
+  }
+}
+header nav {
+  font: 18px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  padding: 10px;
+  float: right;
+}
+header nav a {
+  margin-left: 30px;
+}
+@media only screen and (max-width: 374px) {
+  header nav a {
+    margin-left: 20px;
+  }
+}
 
 /* --------- Scrolling effect --------- */
 .trigger-menu-wrapper {
@@ -269,51 +425,70 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 10px; }
+  padding: 10px;
+}
 
 .scroll-down .trigger-menu-wrapper {
-  transform: translate3d(0, -100%, 0); }
+  transform: translate3d(0, -100%, 0);
+}
 
 .scroll-up .trigger-menu-wrapper {
-  transform: none; }
+  transform: none;
+}
 
 footer {
   font-family: "Cosi Azure";
   display: flex;
   flex-wrap: wrap;
-  align-content: center; }
-  footer .moving-text {
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-    position: relative; }
-  footer .moving-text div {
-    display: block;
-    width: 200%;
-    height: 100px;
-    position: absolute;
-    overflow: hidden;
-    -webkit-animation: marquee 9s linear infinite;
-    animation: marquee 9s linear infinite; }
+  align-content: center;
+}
+footer .moving-text {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+footer .moving-text div {
+  display: block;
+  width: 200%;
+  height: 100px;
+  position: absolute;
+  overflow: hidden;
+  -webkit-animation: marquee 9s linear infinite;
+  animation: marquee 9s linear infinite;
+}
+footer .moving-text span {
+  float: left;
+  width: 50%;
+  font-size: 5vw;
+}
+@media only screen and (max-width: 600px) {
   footer .moving-text span {
-    float: left;
-    width: 50%;
-    font-size: 5vw; }
-    @media only screen and (max-width: 600px) {
-      footer .moving-text span {
-        font-size: 7vw; } }
-    @media only screen and (max-width: 414px) {
-      footer .moving-text span {
-        font-size: 7.3vw; } }
+    font-size: 7vw;
+  }
+}
+@media only screen and (max-width: 414px) {
+  footer .moving-text span {
+    font-size: 7.3vw;
+  }
+}
 @-webkit-keyframes marquee {
   0% {
-    left: 0; }
+    left: 0;
+  }
   100% {
-    left: -100%; } }
+    left: -100%;
+  }
+}
 @keyframes marquee {
   0% {
-    left: 0; }
+    left: 0;
+  }
   100% {
-    left: -100%; } }
+    left: -100%;
+  }
+}
+
+/* sass --watch base.scss style.css */
 
 /*# sourceMappingURL=style.css.map */
