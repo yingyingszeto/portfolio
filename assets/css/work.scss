@@ -1,0 +1,83 @@
+$line-height-1: 155%;
+
+@mixin para-padding {
+  padding: 4% 0;
+}
+
+
+
+.title-text {
+  @include body_medium;
+  line-height: $line-height-1;
+}
+
+.text {
+  @include body_small;
+  line-height: $line-height-1;
+}
+
+body {
+  @include body_small;
+}
+
+img {
+    width: 100%;
+}
+
+.gridContainer_work {
+    display: grid;
+    justify-content:center;
+    gap: 5%;
+    padding: 10px;
+  }
+
+  .gridContainer_work > div {
+    height: auto;
+}
+
+.col-2 {
+  @include para-padding;
+  
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: auto;
+  width: $page-medium;
+  line-height: $line-height-1;
+
+  img.gif {
+    width: 100%;
+  }
+}
+
+.col-3 {
+  @include para-padding;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  width: $page-small;
+  text-align: center;
+  line-height: $line-height-1;
+}
+
+.font-title {
+  @include body_large;
+  @include para-padding;
+  font-weight: bold;
+  text-align: center;
+  line-height: $line-height-1;
+}
+
+.paragraph-description {
+  @include para-padding;
+  width: $page-small;
+  margin: auto;
+}
+
+.paragraph {
+ 
+  @include para-padding;
+
+  width: $page-small;
+  line-height: $line-height-1;
+  margin: auto;
+}
