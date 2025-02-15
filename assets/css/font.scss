@@ -6,10 +6,20 @@ $font_body: 'Apercu';
     font: $size $font_body;
     font-weight: 300;
     color: $color_primary;
+    line-height: 145%;
+}
+
+@mixin body_xl {
+    @include body(60px);
 }
 
 @mixin body_large {
     @include body(36px);
+}
+
+@mixin body_xm {
+    @include body(28px);
+
 }
 
 @mixin body_medium {
@@ -17,7 +27,8 @@ $font_body: 'Apercu';
 }
 
 @mixin body_small {
-    @include body(18px);
+    @include body(20px);
+    letter-spacing: .5px;
 }
 
 section {
