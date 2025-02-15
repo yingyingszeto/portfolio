@@ -1,83 +1,147 @@
-$line-height-1: 155%;
-
-@mixin para-padding {
-  padding: 4% 0;
-}
-
-
-
-.title-text {
-  @include body_medium;
-  line-height: $line-height-1;
-}
-
-.text {
-  @include body_small;
-  line-height: $line-height-1;
-}
+$section-between-space: 7%;
 
 body {
   @include body_small;
 }
 
-img {
-    width: 100%;
+.page-width-l {
+  width: 90%;
 }
 
-.gridContainer_work {
+.page-width-m {
+  width: 80%;
+}
+
+.page-width-s {
+  width: 70%
+}
+
+.page-width-xs {
+  width: 60%
+}
+
+.page-width-xxs {
+  width: 50%
+}
+
+img {
+  width: 100%;
+  margin-bottom: $section-between-space;
+}
+
+/* Title section of case study */
+#case-title {
+  div:first-child {
+    @include body_xl;
+  }
+  div:nth-child(2) {
+    @include body_xm;
+  }
+}
+
+/* Intro para of case study */
+#case-intro {
+  @include body_xm;
+}
+
+/* role section */
+#case-role {
+  text-align: center;
+  div > p::first-line {
+    font-weight: bold;
+  }
+}
+/* text style */
+.title-text {
+  @include body_xm;
+  margin-bottom: 4%;
+}
+
+.text {
+  @include body_small;
+}
+
+.label {
+  Color: grey;
+  text-transform: capitalize;
+  margin-bottom: 2%;
+  letter-spacing: 1.5px;
+}
+
+/* Layouts */
+
+.grid-container {
     display: grid;
     justify-content:center;
-    gap: 5%;
-    padding: 10px;
+    margin: 0 auto $section-between-space auto;
+    div {
+      height: auto;
+    }
   }
 
-  .gridContainer_work > div {
-    height: auto;
+.col-1 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .col-2 {
-  @include para-padding;
-  
+  grid-template-columns: 1fr 1fr;
+  gap: 6%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.remove-space {
+  margin-bottom: 0;
+}
+
+.add-space {
+  margin-bottom: $section-between-space;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: auto;
+  padding: 0;
+}
+
+/*
+.col-1 {
+  margin: auto;
+}
+
+.col-2 {
   display: grid;
   grid-template-columns: 50% 50%;
+
   margin: auto;
-  width: $page-medium;
-  line-height: $line-height-1;
 
   img.gif {
     width: 100%;
   }
+
+  p:first-child {
+    padding-bottom: 4%;
+  }
 }
+
+
 
 .col-3 {
   @include para-padding;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: auto;
-  width: $page-small;
   text-align: center;
-  line-height: $line-height-1;
 }
-
-.font-title {
-  @include body_large;
-  @include para-padding;
-  font-weight: bold;
-  text-align: center;
-  line-height: $line-height-1;
-}
-
-.paragraph-description {
-  @include para-padding;
-  width: $page-small;
-  margin: auto;
-}
-
-.paragraph {
- 
-  @include para-padding;
-
-  width: $page-small;
-  line-height: $line-height-1;
-  margin: auto;
-}
+*/
