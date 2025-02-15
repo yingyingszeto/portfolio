@@ -85,6 +85,7 @@ $accent_1: #556EF2;
 $accent_2: #71F0EA;
 $accent_3: #C31162;
 */
+/*$background-color: #EDEFEA;*/
 /* body */
 section a {
   text-decoration: underline;
@@ -95,13 +96,16 @@ section a:hover {
 }
 
 .background-color {
-  background-color: #EDEFEA;
+  background-color: white;
 }
 
+/*$page-wide: 90%;
+$page-medium: 80%;
+$page-small: 70%;*/
 body {
   display: grid;
-  grid-template-rows: 6% auto 20%;
-  grid-template-columns: 1fr 1200px 1fr;
+  grid-template-rows: 160px auto 20%;
+  grid-template-columns: 1fr 90% 1fr;
   grid-template-areas: "header header header" ". section ." "footer footer footer";
 }
 @media only screen and (max-width: 800px) {
@@ -180,6 +184,7 @@ footer {
   font: 36px "Apercu";
   font-weight: 300;
   color: #000000;
+  line-height: 145%;
   line-height: 147%;
   margin: auto;
 }
@@ -203,6 +208,7 @@ footer {
   font: 36px "Apercu";
   font-weight: 300;
   color: #000000;
+  line-height: 145%;
   color: #000000;
   padding: 3%;
 }
@@ -224,6 +230,7 @@ footer {
   font: 24px "Apercu";
   font-weight: 300;
   color: #000000;
+  line-height: 145%;
   margin: auto;
   /* -------- hover effect -------- */
 }
@@ -281,12 +288,14 @@ footer {
   font: 36px "Apercu";
   font-weight: 300;
   color: #000000;
+  line-height: 145%;
   text-align: inherit;
 }
 #section-about h1 {
   font: 36px "Apercu";
   font-weight: 300;
   color: #000000;
+  line-height: 145%;
   padding: 5% 0;
   font-weight: 600;
 }
@@ -294,90 +303,174 @@ footer {
   font: 24px "Apercu";
   font-weight: 300;
   color: #000000;
+  line-height: 145%;
   line-height: 180%;
   margin-bottom: 3%;
 }
 
-.title-text {
-  font: 24px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 155%;
-}
-
-.text {
-  font: 18px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 155%;
-}
-
 body {
-  font: 18px "Apercu";
+  font: 20px "Apercu";
   font-weight: 300;
   color: #000000;
+  line-height: 145%;
+  letter-spacing: 0.5px;
+}
+
+.page-width-l {
+  width: 90%;
+}
+
+.page-width-m {
+  width: 80%;
+}
+
+.page-width-s {
+  width: 70%;
+}
+
+.page-width-xs {
+  width: 60%;
+}
+
+.page-width-xxs {
+  width: 50%;
 }
 
 img {
   width: 100%;
+  margin-bottom: 7%;
 }
 
-.gridContainer_work {
+/* Title section of case study */
+#case-title div:first-child {
+  font: 60px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 145%;
+}
+#case-title div:nth-child(2) {
+  font: 28px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 145%;
+}
+
+/* Intro para of case study */
+#case-intro {
+  font: 28px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 145%;
+}
+
+/* role section */
+#case-role {
+  text-align: center;
+}
+#case-role div > p::first-line {
+  font-weight: bold;
+}
+
+/* text style */
+.title-text {
+  font: 28px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 145%;
+  margin-bottom: 4%;
+}
+
+.text {
+  font: 20px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 145%;
+  letter-spacing: 0.5px;
+}
+
+.label {
+  Color: grey;
+  text-transform: capitalize;
+  margin-bottom: 2%;
+  letter-spacing: 1.5px;
+}
+
+/* Layouts */
+.grid-container {
   display: grid;
   justify-content: center;
-  gap: 5%;
-  padding: 10px;
+  margin: 0 auto 7% auto;
 }
-
-.gridContainer_work > div {
+.grid-container div {
   height: auto;
 }
 
-.col-2 {
-  padding: 4% 0;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin: auto;
-  width: 1000px;
-  line-height: 155%;
+.col-1 {
+  margin-left: auto;
+  margin-right: auto;
 }
-.col-2 img.gif {
-  width: 100%;
+
+.col-2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 6%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .col-3 {
-  padding: 4% 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.remove-space {
+  margin-bottom: 0;
+}
+
+.add-space {
+  margin-bottom: 7%;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: auto;
+  padding: 0;
+}
+
+/*
+.col-1 {
+  margin: auto;
+}
+
+.col-2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  margin: auto;
+
+  img.gif {
+    width: 100%;
+  }
+
+  p:first-child {
+    padding-bottom: 4%;
+  }
+}
+
+
+
+.col-3 {
+  @include para-padding;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: auto;
-  width: 800px;
   text-align: center;
-  line-height: 155%;
 }
-
-.font-title {
-  font: 36px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  padding: 4% 0;
-  font-weight: bold;
-  text-align: center;
-  line-height: 155%;
-}
-
-.paragraph-description {
-  padding: 4% 0;
-  width: 800px;
-  margin: auto;
-}
-
-.paragraph {
-  padding: 4% 0;
-  width: 800px;
-  line-height: 155%;
-  margin: auto;
-}
-
+*/
 /* organisms */
 header {
   width: 100%;
@@ -403,9 +496,11 @@ header #brand-logo {
   }
 }
 header nav {
-  font: 18px "Apercu";
+  font: 20px "Apercu";
   font-weight: 300;
   color: #000000;
+  line-height: 145%;
+  letter-spacing: 0.5px;
   padding: 10px;
   float: right;
 }
