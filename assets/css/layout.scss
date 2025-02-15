@@ -1,11 +1,11 @@
-$page-wide: 1200px;
-$page-medium: 1000px;
-$page-small: 800px;
+/*$page-wide: 90%;
+$page-medium: 80%;
+$page-small: 70%;*/
 
 body {
     display: grid;
-    grid-template-rows: 6% auto 20%;
-    grid-template-columns: 1fr $page-wide 1fr;
+    grid-template-rows: 160px auto 20%;
+    grid-template-columns: 1fr 90% 1fr;
     grid-template-areas:
     "header header header"
     ". section ."
