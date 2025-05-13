@@ -4,7 +4,7 @@ $page-small: 70%;*/
 
 body {
     display: grid;
-    grid-template-rows: 160px auto 20%;
+    grid-template-rows: 160px auto 4%;
     grid-template-columns: 1fr 90% 1fr;
     grid-template-areas:
     "header header header"
@@ -12,10 +12,10 @@ body {
     "footer footer footer";
     @media only screen and (max-width: 800px) {
         grid-template-columns: 1fr 90% 1fr;
-        grid-template-rows: 2% auto 16%;
+        grid-template-rows: 2% auto 4%;
     }
     @media only screen and (max-width: 430px) {
-        grid-template-rows: 3% auto 5%;
+        grid-template-rows: 3% auto 4%;
     }
 }
 
@@ -36,9 +36,6 @@ section {
     @media only screen and (max-width: 430px) {
         grid-template-rows: 2.4fr 6fr;
     }
-    @media only screen and (max-width: 430px) {
-        grid-template-rows: 2fr 5fr;
-    }
     grid-template-areas:
     "gridContainer_intro"
     "gridContainer_project"; 
@@ -51,10 +48,13 @@ section {
 
 #gridContainer_project {
     grid-area: gridContainer_project;
-  
+    row-gap: 30px;
     display: grid;
     grid-template-rows: auto 1fr 1fr 1fr;
-    row-gap: 30px;
+
+    @media only screen and (max-width: 430px) {
+        row-gap: 15px;
+    }
 }
 
 /* work */
