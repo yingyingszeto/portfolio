@@ -4,30 +4,38 @@ header {
         @include hover-link;
     }
     #brand-logo {
-        font: 32px $font_brand;
-        @media only screen and (max-width: 800px) {
-            font: 26px $font_brand;
-        }
-        @media only screen and (max-width: 374px) {
-            font: 6.7vw $font_brand;
-        }
-        
+        font:32px $font_brand;
         line-height: 128%;
         padding: 10px;   
         float: left;
+        @media only screen and (max-width: 800px) {
+            font: 26px $font_brand;
+        }
+        @media only screen and (max-width: 430px) {
+            float: none;
+        }
     }
-    nav{
+    nav {
         @include body_small;
         padding: 10px;
         float: right;
+        @media only screen and (max-width: 430px) {
+            float: none;
+        }
         a {
             margin-left: 30px;
-            @media only screen and (max-width: 374px) {
+            @media only screen and (max-width: 430px) {
                 margin-left: 20px;
                 
             }
         }
        
+    }
+}
+
+nav a:first-child {
+    @media only screen and (max-width: 430px) {
+        margin-left: 0px;
     }
 }
 
