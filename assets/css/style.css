@@ -93,7 +93,7 @@ section a {
   text-decoration-color: lightcoral;
 }
 section a:hover {
-  color: #999999;
+  color: #8E90A2;
 }
 
 .background-color {
@@ -105,19 +105,19 @@ $page-medium: 80%;
 $page-small: 70%;*/
 body {
   display: grid;
-  grid-template-rows: 160px auto 20%;
+  grid-template-rows: 160px auto 4%;
   grid-template-columns: 1fr 90% 1fr;
   grid-template-areas: "header header header" ". section ." "footer footer footer";
 }
 @media only screen and (max-width: 800px) {
   body {
     grid-template-columns: 1fr 90% 1fr;
-    grid-template-rows: 2% auto 16%;
+    grid-template-rows: 2% auto 4%;
   }
 }
 @media only screen and (max-width: 430px) {
   body {
-    grid-template-rows: 3% auto 5%;
+    grid-template-rows: 3% auto 4%;
   }
 }
 
@@ -144,11 +144,6 @@ section {
     grid-template-rows: 2.4fr 6fr;
   }
 }
-@media only screen and (max-width: 430px) {
-  #section-index {
-    grid-template-rows: 2fr 5fr;
-  }
-}
 
 #gridContainer_intro {
   grid-area: gridContainer_intro;
@@ -157,9 +152,14 @@ section {
 
 #gridContainer_project {
   grid-area: gridContainer_project;
+  row-gap: 30px;
   display: grid;
   grid-template-rows: auto 1fr 1fr 1fr;
-  row-gap: 30px;
+}
+@media only screen and (max-width: 430px) {
+  #gridContainer_project {
+    row-gap: 15px;
+  }
 }
 
 /* work */
@@ -168,8 +168,11 @@ footer {
 }
 
 /* page */
+body#index {
+  grid-template-rows: 160px auto 9%;
+}
 @media only screen and (max-width: 430px) {
-  body {
+  body#index {
     grid-template-rows: 10% auto 5%;
   }
 }
@@ -230,7 +233,7 @@ footer {
   }
 }
 #section-index div#gridContainer_intro #social a :hover {
-  color: #999999;
+  color: #8E90A2;
   transition: all ease 0.3s;
 }
 #section-index div#gridContainer_project {
@@ -286,6 +289,7 @@ footer {
   left: 0;
   opacity: 0;
   transition: opacity 0.4s ease-out;
+  /*cursor: url("https://raw.githubusercontent.com/yingyingszeto/portfolio/refs/heads/main/assets/img/cursor.svg"), auto;*/
   cursor: url("https://raw.githubusercontent.com/yingyingszeto/forLinks/master/cursor.svg"), auto;
 }
 #section-index div#gridContainer_project .image-hover:hover {
@@ -331,6 +335,11 @@ body {
     line-height: 145%;
   }
 }
+@media only screen and (max-width: 430px) {
+  body {
+    grid-template-rows: 3% auto 5%;
+  }
+}
 
 .page-width-l {
   width: 90%;
@@ -366,16 +375,17 @@ img {
   width: 100%;
 }
 
-.hero-image {
-  margin-bottom: 7%;
-}
-
 /* Title section of case study */
 #case-title div:first-child {
   font: 60px "Apercu";
   font-weight: 300;
   color: #000000;
   line-height: 145%;
+}
+@media only screen and (max-width: 430px) {
+  #case-title div:first-child {
+    font-size: 48px;
+  }
 }
 #case-title div:nth-child(2) {
   font: 28px "Apercu";
@@ -530,12 +540,33 @@ hr {
   padding: 0;
 }
 
+.more-project {
+  margin-bottom: 4%;
+}
+
+.more-project-img {
+  margin: auto;
+}
+.more-project-img a > img {
+  width: 48%;
+  padding: 3px;
+}
+@media only screen and (max-width: 430px) {
+  .more-project-img a > img {
+    width: 100%;
+  }
+}
+
+.more-project-img > a:hover {
+  cursor: url("https://raw.githubusercontent.com/yingyingszeto/forLinks/master/cursor.svg"), auto;
+}
+
 /* organisms */
 header {
   width: 100%;
 }
 header a:hover {
-  color: #999999;
+  color: #8E90A2;
   transition: all ease 0.3s;
 }
 header #brand-logo {
@@ -610,7 +641,7 @@ header nav a {
 }
 
 footer {
-  font-family: "Archer";
+  font-family: "Apercu";
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -627,13 +658,13 @@ footer .moving-text div {
   height: 100px;
   position: absolute;
   overflow: hidden;
-  -webkit-animation: marquee 9s linear infinite;
-  animation: marquee 9s linear infinite;
+  -webkit-animation: marquee 15s linear infinite;
+  animation: marquee 15s linear infinite;
 }
 footer .moving-text span {
   float: left;
   width: 50%;
-  font-size: 5vw;
+  font-size: "Apercu";
 }
 @media only screen and (max-width: 600px) {
   footer .moving-text span {
@@ -660,6 +691,10 @@ footer .moving-text span {
   100% {
     left: -100%;
   }
+}
+
+.footer-icon {
+  width: 18px;
 }
 
 /* sass --watch base.scss style.css */
