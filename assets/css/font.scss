@@ -1,4 +1,5 @@
-$font_brand: 'Cosi Azure';
+/*$font_brand: 'Cosi Azure';*/
+$font_brand: 'Archer';
 $font_body: 'Apercu';
 
 /* body */
@@ -19,7 +20,9 @@ $font_body: 'Apercu';
 
 @mixin body_xm {
     @include body(28px);
-
+    @media only screen and (max-width: 430px) {
+        @include body(24px);
+    }
 }
 
 @mixin body_medium {
@@ -29,6 +32,9 @@ $font_body: 'Apercu';
 @mixin body_small {
     @include body(20px);
     letter-spacing: .5px;
+     @media only screen and (max-width: 430px) {
+        @include body(18px);
+    }
 }
 
 section {
