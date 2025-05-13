@@ -1,4 +1,5 @@
 $section-between-space: 7%;
+$section-between-space-responsive: 15%;
 
 body {
   @include body_small;
@@ -8,12 +9,6 @@ body {
   width: 90%;
   @media only screen and (max-width: 768px) {
     width: 100%;
-  }
-}
-
-.reverse-add-space {
-  @media only screen and (max-width: 768px) {
-    margin-bottom: 6%;
   }
 }
 
@@ -92,6 +87,9 @@ img {
     div {
       height: auto;
     }
+  @media only screen and (max-width: 430px) {
+    margin: 0 auto $section-between-space-responsive auto;  
+  }
   }
 
 .col-1 {
@@ -112,7 +110,7 @@ img {
 
   .responsive-space {
     @media only screen and (max-width: 768px) {
-      margin-bottom: 6% ;
+      margin-bottom: 7% ;
     }
   }
 }
@@ -130,6 +128,10 @@ img {
 
 .add-space {
   margin-bottom: $section-between-space;
+  @media only screen and (max-width: 430px) {
+    margin-bottom: $section-between-space-responsive; 
+  }
+
 }
 
 .col-reverse {
@@ -147,34 +149,3 @@ hr {
   margin: auto;
   padding: 0;
 }
-
-/*
-.col-1 {
-  margin: auto;
-}
-
-.col-2 {
-  display: grid;
-  grid-template-columns: 50% 50%;
-
-  margin: auto;
-
-  img.gif {
-    width: 100%;
-  }
-
-  p:first-child {
-    padding-bottom: 4%;
-  }
-}
-
-
-
-.col-3 {
-  @include para-padding;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: auto;
-  text-align: center;
-}
-*/
