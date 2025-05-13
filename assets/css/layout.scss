@@ -14,8 +14,8 @@ body {
         grid-template-columns: 1fr 90% 1fr;
         grid-template-rows: 2% auto 16%;
     }
-    @media only screen and (max-width: 414px) {
-        grid-template-rows: 11% auto 5%;
+    @media only screen and (max-width: 430px) {
+        grid-template-rows: 3% auto 5%;
     }
 }
 
@@ -33,10 +33,10 @@ section {
     @media only screen and (max-width: 800px) {
         grid-template-rows: 2.4fr 8fr;
     }
-    @media only screen and (max-width: 414px) {
+    @media only screen and (max-width: 430px) {
         grid-template-rows: 2.4fr 6fr;
     }
-    @media only screen and (max-width: 414px) {
+    @media only screen and (max-width: 430px) {
         grid-template-rows: 2fr 5fr;
     }
     grid-template-areas:
