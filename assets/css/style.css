@@ -110,13 +110,8 @@ body {
 }
 @media only screen and (max-width: 800px) {
   body {
-    grid-template-columns: 1fr 80% 1fr;
-    grid-template-rows: 10% auto 16%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  body {
     grid-template-columns: 1fr 90% 1fr;
+    grid-template-rows: 2% auto 16%;
   }
 }
 @media only screen and (max-width: 414px) {
@@ -176,6 +171,11 @@ footer {
   text-align: center;
   width: 800px;
   margin: auto;
+}
+@media only screen and (max-width: 900px) {
+  #section-index {
+    width: 100%;
+  }
 }
 #section-index img {
   width: 100%;
@@ -319,6 +319,17 @@ body {
 .page-width-l {
   width: 90%;
 }
+@media only screen and (max-width: 768px) {
+  .page-width-l {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .reverse-add-space {
+    margin-bottom: 6%;
+  }
+}
 
 .page-width-m {
   width: 80%;
@@ -326,6 +337,11 @@ body {
 
 .page-width-s {
   width: 70%;
+}
+@media only screen and (max-width: 768px) {
+  .page-width-s {
+    width: 100%;
+  }
 }
 
 .page-width-xs {
@@ -419,6 +435,17 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+@media only screen and (max-width: 768px) {
+  .col-2 {
+    grid-template-columns: 1fr;
+    gap: 0%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .col-2 .responsive-space {
+    margin-bottom: 6%;
+  }
+}
 
 .col-3 {
   grid-template-columns: 1fr 1fr 1fr;
@@ -433,6 +460,13 @@ img {
 
 .add-space {
   margin-bottom: 7%;
+}
+
+@media only screen and (max-width: 768px) {
+  .col-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 hr {
