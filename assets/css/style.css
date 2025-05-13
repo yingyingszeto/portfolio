@@ -135,7 +135,7 @@ section {
 
 #section-index {
   display: grid;
-  grid-template-rows: 2.4fr 8fr;
+  grid-template-rows: 350px 8fr;
   grid-template-areas: "gridContainer_intro" "gridContainer_project";
 }
 @media only screen and (max-width: 800px) {
@@ -338,6 +338,9 @@ body {
 
 img {
   width: 100%;
+}
+
+.hero-image {
   margin-bottom: 7%;
 }
 
