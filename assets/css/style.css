@@ -169,7 +169,7 @@ footer {
 
 /* page */
 body#index {
-  grid-template-rows: 160px auto 9%;
+  grid-template-rows: 80px auto 9%;
 }
 @media only screen and (max-width: 430px) {
   body#index {
@@ -181,6 +181,7 @@ body#index {
   text-align: center;
   width: 800px;
   margin: auto;
+  text-align: left;
 }
 @media only screen and (max-width: 900px) {
   #section-index {
@@ -191,11 +192,6 @@ body#index {
   width: 100%;
 }
 #section-index div#gridContainer_intro {
-  font: 36px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 145%;
-  line-height: 147%;
   margin: auto;
 }
 #section-index div#gridContainer_intro span {
@@ -205,6 +201,20 @@ body#index {
   #section-index div#gridContainer_intro {
     font-size: 8vw;
   }
+}
+#section-index div#gridContainer_intro p:first-child {
+  font-size: 48px;
+}
+#section-index div#gridContainer_intro p:first-child span {
+  font-weight: 600;
+}
+#section-index div#gridContainer_intro p:nth-child(2) {
+  font-size: 22px;
+  margin-top: 4%;
+}
+#section-index div#gridContainer_intro p:nth-child(3) {
+  font-size: 18px;
+  margin-top: 5%;
 }
 #section-index div#gridContainer_intro #social {
   margin: 5% 0;
