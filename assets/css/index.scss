@@ -1,5 +1,5 @@
 body#index {
-    grid-template-rows: 160px auto 9%;
+    grid-template-rows: 80px auto 9%;
     @media only screen and (max-width: 430px) {
         grid-template-rows: 10% auto 5%;
     }
@@ -9,6 +9,7 @@ body#index {
     text-align: center;
     width: 800px;
     margin: auto;
+    text-align: left;
     @media only screen and (max-width: 900px) {
             width: 100%;
         }
@@ -17,12 +18,27 @@ body#index {
     }
 
     div#gridContainer_intro {
-        @include body_large;
-        line-height: 147%;
         margin: auto;
         span { font-weight: 600; }
         @media only screen and (max-width: 475px) {
             font-size: 8vw;
+        }
+
+        p:first-child {
+            font-size: 48px;
+            span {
+                font-weight: 600;
+            }
+        }
+
+        p:nth-child(2) {
+            font-size: 22px;
+            margin-top: 4%;
+        }
+
+        p:nth-child(3) {
+            font-size: 18px;
+            margin-top: 5%;
         }
 
         #social {
