@@ -7,13 +7,49 @@
 @font-face {
   font-family: "Apercu";
   src: url("Apercu-Bold.woff"), url("Apercu-Bold.otf") format("opentype");
-  font-weight: bold;
+  font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "Apercu";
   src: url("Apercu-Light.woff"), url("Apercu-Light.otf") format("opentype");
-  font-weight: 300;
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("Apercu-Medium.woff"), url("Apercu-Medium.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("Apercu-Regular.woff"), url("Apercu-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("Apercu-Light-Italic.woff"), url("Apercu-Light-Italic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("Apercu-Medium-Italic.woff"), url("Apercu-Medium-Italic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Archer";
+  src: url("ArcherBoldPro.woff"), url("ArcherBoldPro.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Archer";
+  src: url("ArcherSemiboldPro.woff"), url("ArcherSemiboldPro.otf") format("opentype");
+  font-weight: lighter;
   font-style: normal;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -131,7 +167,7 @@ section {
 
 #section-index {
   display: grid;
-  grid-template-rows: 350px 8fr;
+  grid-template-rows: 320px 8fr;
   grid-template-areas: "gridContainer_intro" "gridContainer_project";
 }
 @media only screen and (max-width: 800px) {
@@ -152,7 +188,7 @@ section {
 
 #gridContainer_project {
   grid-area: gridContainer_project;
-  row-gap: 30px;
+  row-gap: 16px;
   display: grid;
   grid-template-rows: auto 1fr 1fr 1fr;
 }
@@ -165,6 +201,10 @@ section {
 /* work */
 footer {
   grid-area: footer;
+}
+
+.background-color {
+  background-color: #EDEFEA;
 }
 
 /* page */
@@ -206,15 +246,40 @@ body#index {
   font-size: 48px;
 }
 #section-index div#gridContainer_intro p:first-child span {
-  font-weight: 600;
+  font-family: "Archer";
+  font-weight: bold;
 }
 #section-index div#gridContainer_intro p:nth-child(2) {
-  font-size: 22px;
-  margin-top: 4%;
+  font: 18px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 160%;
+  letter-spacing: 0.5px;
+  margin-top: 5%;
+}
+@media only screen and (max-width: 430px) {
+  #section-index div#gridContainer_intro p:nth-child(2) {
+    font: 18px "Apercu";
+    font-weight: 300;
+    color: #000000;
+    line-height: 160%;
+  }
 }
 #section-index div#gridContainer_intro p:nth-child(3) {
-  font-size: 18px;
+  font: 18px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 160%;
+  letter-spacing: 0.5px;
   margin-top: 5%;
+}
+@media only screen and (max-width: 430px) {
+  #section-index div#gridContainer_intro p:nth-child(3) {
+    font: 18px "Apercu";
+    font-weight: 300;
+    color: #000000;
+    line-height: 160%;
+  }
 }
 #section-index div#gridContainer_intro #social {
   margin: 5% 0;
@@ -228,7 +293,7 @@ body#index {
   font: 36px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
   color: #000000;
   padding: 3%;
 }
@@ -250,7 +315,7 @@ body#index {
   font: 24px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
   margin: auto;
   color: #8E90A2;
   /* -------- hover effect -------- */
@@ -306,35 +371,112 @@ body#index {
   opacity: 1;
 }
 
+body#about {
+  grid-template-rows: 120px auto 9%;
+}
+@media only screen and (max-width: 430px) {
+  body#about {
+    grid-template-rows: 10% auto 5%;
+  }
+}
+
 #section-about {
-  font: 36px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 145%;
+  width: 800px;
+  margin: auto;
   text-align: inherit;
 }
 #section-about h1 {
   font: 36px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
-  padding: 5% 0;
+  line-height: 160%;
   font-weight: 600;
+  margin-bottom: 5%;
 }
-#section-about p {
+#section-about h3 {
   font: 24px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
+  font-family: "Archer";
+  line-height: 190%;
+  font-weight: 600;
+  padding-bottom: 1%;
+}
+#section-about p {
+  font: 18px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 160%;
+  letter-spacing: 0.5px;
   line-height: 180%;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 430px) {
+  #section-about p {
+    font: 18px "Apercu";
+    font-weight: 300;
+    color: #000000;
+    line-height: 160%;
+  }
+}
+
+body#playground {
+  grid-template-rows: 120px auto 9%;
+}
+@media only screen and (max-width: 430px) {
+  body#playground {
+    grid-template-rows: 10% auto 5%;
+  }
+}
+
+#section-playground {
+  width: 800px;
+  margin: auto;
+  text-align: inherit;
+}
+#section-playground h1 {
+  font: 36px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 160%;
+  font-weight: 600;
+  margin-bottom: 5%;
+}
+#section-playground h1 span {
+  font-family: "Archer";
+}
+#section-playground h3 {
+  font: 24px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 160%;
+  font-weight: 600;
+  padding-bottom: 1%;
+}
+#section-playground p {
+  font: 18px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 160%;
+  letter-spacing: 0.5px;
+  line-height: 180%;
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 430px) {
+  #section-playground p {
+    font: 18px "Apercu";
+    font-weight: 300;
+    color: #000000;
+    line-height: 160%;
+  }
 }
 
 body {
-  font: 20px "Apercu";
+  font: 18px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
   letter-spacing: 0.5px;
 }
 @media only screen and (max-width: 430px) {
@@ -342,7 +484,7 @@ body {
     font: 18px "Apercu";
     font-weight: 300;
     color: #000000;
-    line-height: 145%;
+    line-height: 160%;
   }
 }
 @media only screen and (max-width: 430px) {
@@ -387,10 +529,10 @@ img {
 
 /* Title section of case study */
 #case-title div:first-child {
-  font: 60px "Apercu";
+  font: 54px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
 }
 @media only screen and (max-width: 430px) {
   #case-title div:first-child {
@@ -398,33 +540,33 @@ img {
   }
 }
 #case-title div:nth-child(2) {
-  font: 28px "Apercu";
+  font: 26px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
 }
 @media only screen and (max-width: 430px) {
   #case-title div:nth-child(2) {
     font: 24px "Apercu";
     font-weight: 300;
     color: #000000;
-    line-height: 145%;
+    line-height: 160%;
   }
 }
 
 /* Intro para of case study */
 #case-intro {
-  font: 28px "Apercu";
+  font: 26px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
 }
 @media only screen and (max-width: 430px) {
   #case-intro {
     font: 24px "Apercu";
     font-weight: 300;
     color: #000000;
-    line-height: 145%;
+    line-height: 160%;
   }
 }
 
@@ -438,10 +580,11 @@ img {
 
 /* text style */
 .title-text {
-  font: 28px "Apercu";
+  font: 26px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
+  font-weight: 300;
   margin-bottom: 4%;
 }
 @media only screen and (max-width: 430px) {
@@ -449,15 +592,15 @@ img {
     font: 24px "Apercu";
     font-weight: 300;
     color: #000000;
-    line-height: 145%;
+    line-height: 160%;
   }
 }
 
 .text {
-  font: 20px "Apercu";
+  font: 18px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
   letter-spacing: 0.5px;
 }
 @media only screen and (max-width: 430px) {
@@ -465,13 +608,12 @@ img {
     font: 18px "Apercu";
     font-weight: 300;
     color: #000000;
-    line-height: 145%;
+    line-height: 160%;
   }
 }
 
 .label {
-  Color: grey;
-  text-transform: capitalize;
+  Color: #8E90A2;
   margin-bottom: 2%;
   letter-spacing: 1.5px;
 }
@@ -580,7 +722,7 @@ header a:hover {
   transition: all ease 0.3s;
 }
 header #brand-logo {
-  font: 32px "Archer";
+  font: 26px "Archer";
   line-height: 128%;
   padding: 10px;
   float: left;
@@ -596,10 +738,10 @@ header #brand-logo {
   }
 }
 header nav {
-  font: 20px "Apercu";
+  font: 18px "Apercu";
   font-weight: 300;
   color: #000000;
-  line-height: 145%;
+  line-height: 160%;
   letter-spacing: 0.5px;
   padding: 10px;
   float: right;
@@ -609,7 +751,7 @@ header nav {
     font: 18px "Apercu";
     font-weight: 300;
     color: #000000;
-    line-height: 145%;
+    line-height: 160%;
   }
 }
 @media only screen and (max-width: 430px) {
@@ -640,6 +782,7 @@ header nav a {
   left: 0;
   right: 0;
   padding: 10px;
+  background: white;
 }
 
 .scroll-down .trigger-menu-wrapper {
@@ -648,6 +791,52 @@ header nav a {
 
 .scroll-up .trigger-menu-wrapper {
   transform: none;
+}
+
+/* --------- Dropdown --------- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  font: 18px "Apercu";
+  font-weight: 300;
+  color: #000000;
+  line-height: 160%;
+  letter-spacing: 0.5px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 130px;
+  box-shadow: 2px 6px 23px 2px rgba(0, 0, 0, 0.04);
+  z-index: 1;
+}
+@media only screen and (max-width: 430px) {
+  .dropdown-content {
+    font: 18px "Apercu";
+    font-weight: 300;
+    color: #000000;
+    line-height: 160%;
+  }
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #eaeaea;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 footer {
