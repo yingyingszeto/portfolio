@@ -2,16 +2,17 @@
 $font_brand: 'Archer';
 $font_body: 'Apercu';
 
+
 /* body */
 @mixin body($size) {
     font: $size $font_body;
     font-weight: 300;
     color: $color_primary;
-    line-height: 145%;
+    line-height: 160%;
 }
 
 @mixin body_xl {
-    @include body(60px);
+    @include body(54px);
 }
 
 @mixin body_large {
@@ -19,7 +20,7 @@ $font_body: 'Apercu';
 }
 
 @mixin body_xm {
-    @include body(28px);
+    @include body(26px);
     @media only screen and (max-width: 430px) {
         @include body(24px);
     }
@@ -30,7 +31,7 @@ $font_body: 'Apercu';
 }
 
 @mixin body_small {
-    @include body(20px);
+    @include body(18px);
     letter-spacing: .5px;
      @media only screen and (max-width: 430px) {
         @include body(18px);
