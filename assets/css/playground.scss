@@ -1,0 +1,32 @@
+body#playground {
+    grid-template-rows: 120px auto 9%;
+    @media only screen and (max-width: 430px) {
+        grid-template-rows: 10% auto 5%;
+    }
+}
+
+#section-playground {
+    width: 800px;
+    margin: auto;
+    
+    h1 {
+        @include body_large;
+        font-weight: 600;
+        margin-bottom: 5%;
+        span {
+            font-family: 'Archer';
+        }
+    }
+    h3 {
+        @include body_medium;
+        font-weight: 600;
+        padding-bottom: 1%;
+    }
+    p {
+        @include body_small;
+        line-height: 180%;
+        margin-bottom: 5%;
+    }
+   
+    text-align: inherit;
+}
