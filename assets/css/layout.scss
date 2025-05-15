@@ -29,7 +29,7 @@ section {
   
 #section-index {
     display: grid;
-    grid-template-rows: 350px 8fr;
+    grid-template-rows: 320px 8fr;
     @media only screen and (max-width: 800px) {
         grid-template-rows: 2.4fr 8fr;
     }
@@ -48,7 +48,7 @@ section {
 
 #gridContainer_project {
     grid-area: gridContainer_project;
-    row-gap: 30px;
+    row-gap: 16px;
     display: grid;
     grid-template-rows: auto 1fr 1fr 1fr;
 
@@ -59,4 +59,8 @@ section {
 
 /* work */
 footer { grid-area: footer; }
+
+.background-color {
+    background-color: #EDEFEA;
+}
 
