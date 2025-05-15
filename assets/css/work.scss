@@ -66,6 +66,7 @@ img {
 /* text style */
 .title-text {
   @include body_xm;
+  font-weight: 300;
   margin-bottom: 4%;
 }
 
@@ -74,8 +75,7 @@ img {
 }
 
 .label {
-  Color: grey;
-  text-transform: capitalize;
+  Color: $color_hover;
   margin-bottom: 2%;
   letter-spacing: 1.5px;
 }
