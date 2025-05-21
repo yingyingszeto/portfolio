@@ -42,10 +42,10 @@
                     <div class="dropdown">
                         <a href="">Work<i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
-                            <a href="p1.html">Application Status Tracking</a>
-                            <a href="p2.html">Insurance Sales Portal</a>
-                            <a href="p3.html">Agent Toolkit</a>
-                            <a href="p4.html">Product Onboarding</a>
+                            <a href="p1.html">Application Status Tracking<br><span class="tag-1">UX</span><span class="tag-4">User Testing</span></a>
+                            <a href="p2.html">Insurance Sales Portal<br><span class="tag-2">IA</span><span class="tag-4">User Testing</span></a>
+                            <a href="p3.html">Agent Toolkit<br><span class="tag-1">UX</span><span class="tag-4">Tree Testing</span></a>
+                            <a href="p4.html">Product Onboarding<br><span class="tag-3">Visual</span><span class="tag-1">UX</span></a>
                         </div>
                     </div>
                     <a href="about.html">About</a>
@@ -57,19 +57,46 @@
     </header>
 
     <section id="section-playground">
-        <h1>My experiement projects</h1>
-        <h3>Visual Design</h3>
-        <iframe src="https://www.behance.net/embed/project/111697955?ilo0=1" height="316" width="30%" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
-        <iframe src="https://www.behance.net/embed/project/111697955?ilo0=1" height="316" width="30%" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
-        <iframe src="https://www.behance.net/embed/project/111697955?ilo0=1" height="316" width="30%" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
-
-        <h3>Creative Coding</h3>
-        <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="MGbgbO" data-pen-title="Animated Text Demo - #005" data-user="yingyingszeto" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/yingyingszeto/pen/MGbgbO">
-  Animated Text Demo - #005</a> by Ying Ying Szero (<a href="https://codepen.io/yingyingszeto">@yingyingszeto</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-
+        <h1>Freelance and fun experiments</h1>
+        <p>View more on <a href="https://www.behance.net/yingyingszeto" target="_blank">Behance</a>, <a href="https://codepen.io/yingyingszeto" target="_blank">Codepen</a>, and <a href="https://github.com/yingyingszeto" target="_blank">Github</a>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('ui')">UI Design</button>
+            <button class="btn" onclick="filterSelection('web')">Web Design</button>
+            <button class="btn" onclick="filterSelection('coding')">Creative Coding</button>
+            <button class="btn" onclick="filterSelection('freelance')">Freelance</button>
+        </div>
+        <!--<div class="row"> 
+            <div class="column">
+                <img class="img-filter ui" src="assets/img/playground/UI-1.png"/>
+                <img class="img-filter visual" src="assets/img/playground/bs-1.png" />
+                <img class="img-filter coding" src="assets/img/playground/at-2.png" />
+                <img class="img-filter ui" src="assets/img/playground/UI-4.png" />
+            </div>    
+        </div>-->
+        <div class="card">
+            <img class="img-filter ui" src="assets/img/playground/01.png"/>
+        </div>
+        <img class="img-filter coding" src="assets/img/playground/02.png"/>
+        <img class="img-filter ui" src="assets/img/playground/03.png"/>
+        <img class="img-filter coding" src="assets/img/playground/04.png"/>
+        <img class="img-filter ui" src="assets/img/playground/05.png"/>
+        <img class="img-filter freelance web" src="assets/img/playground/06.png"/>
+        <img class="img-filter ui" src="assets/img/playground/07.png"/>
+        <img class="img-filter coding" src="assets/img/playground/08.png"/>
+        <img class="img-filter ui web" src="assets/img/playground/09.png"/>
+        <img class="img-filter freelance" src="assets/img/playground/10.png"/>
+        <img class="img-filter coding" src="assets/img/playground/11.png"/>
+        <img class="img-filter freelance web" src="assets/img/playground/12.png"/>
+        <img class="img-filter coding" src="assets/img/playground/13.png"/>
+        <img class="img-filter freelance" src="assets/img/playground/14.png"/>
+        <img class="img-filter freelance" src="assets/img/playground/15.png"/>
+        <img class="img-filter freelance" src="assets/img/playground/16.png"/>
+        <img class="img-filter coding" src="assets/img/playground/17.png"/>
+        <img class="img-filter coding" src="assets/img/playground/18.png"/>
+        <img class="img-filter freelance" src="assets/img/playground/19.png"/>
+        <img class="img-filter coding" src="assets/img/playground/20.png"/>
+        <img class="img-filter freelance web" src="assets/img/playground/21.png"/>
     </section>
    <footer>
         <div class="moving-text">
@@ -81,6 +108,7 @@
     </footer>
 
     <script src="assets/js/global.js"></script>
+    <script src="assets/js/playground.js"></script>
     <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </body>
 </html>
