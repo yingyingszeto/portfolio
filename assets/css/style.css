@@ -129,7 +129,7 @@ section a {
   text-decoration-color: lightcoral;
 }
 section a:hover {
-  color: #8E90A2;
+  color: #616580;
 }
 
 .background-color {
@@ -308,7 +308,7 @@ body#index {
   }
 }
 #section-index div#gridContainer_intro #social a :hover {
-  color: #8E90A2;
+  color: #616580;
   transition: all ease 0.3s;
 }
 #section-index div#gridContainer_project {
@@ -422,17 +422,13 @@ body#about {
 }
 
 body#playground {
-  grid-template-rows: 120px auto 9%;
-}
-@media only screen and (max-width: 430px) {
-  body#playground {
-    grid-template-rows: 10% auto 5%;
-  }
+  grid-template-rows: none;
+  grid-template-columns: 1fr 1200px 1fr;
 }
 
 #section-playground {
-  width: 800px;
   margin: auto;
+  margin-top: 120px;
   text-align: inherit;
 }
 #section-playground h1 {
@@ -441,7 +437,6 @@ body#playground {
   color: #000000;
   line-height: 160%;
   font-weight: 600;
-  margin-bottom: 5%;
 }
 #section-playground h1 span {
   font-family: "Archer";
@@ -452,7 +447,6 @@ body#playground {
   color: #000000;
   line-height: 160%;
   font-weight: 600;
-  padding-bottom: 1%;
 }
 #section-playground p {
   font: 18px "Apercu";
@@ -461,7 +455,6 @@ body#playground {
   line-height: 160%;
   letter-spacing: 0.5px;
   line-height: 180%;
-  margin-bottom: 5%;
 }
 @media only screen and (max-width: 430px) {
   #section-playground p {
@@ -470,6 +463,74 @@ body#playground {
     color: #000000;
     line-height: 160%;
   }
+}
+
+/* For flexbox effect */
+/*
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 10px;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+.img-width-x {
+    width: 90%;
+}
+
+.img-width-m {
+    width: 90%;
+}
+
+.img-width-s {
+    width: 90%;
+}
+*/
+/* img filtering */
+#section-playground img {
+  float: left;
+  Width: 30%;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.img-filter {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#myBtnContainer {
+  margin: 3% 0 2% 0;
+}
+#myBtnContainer button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 4px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+#myBtnContainer button:hover {
+  color: #616580;
+  border: 1px solid #616580;
 }
 
 body {
@@ -613,7 +674,7 @@ img {
 }
 
 .label {
-  Color: #8E90A2;
+  Color: #616580;
   margin-bottom: 2%;
   letter-spacing: 1.5px;
 }
@@ -718,7 +779,7 @@ header {
   width: 100%;
 }
 header a:hover {
-  color: #8E90A2;
+  color: #616580;
   transition: all ease 0.3s;
 }
 header #brand-logo {
@@ -798,6 +859,10 @@ header nav a {
   position: relative;
   display: inline-block;
 }
+.dropdown a > i {
+  margin-left: 6px;
+  font-size: 12px;
+}
 
 .dropdown-content {
   font: 18px "Apercu";
@@ -807,10 +872,12 @@ header nav a {
   letter-spacing: 0.5px;
   display: none;
   position: absolute;
+  line-height: 140%;
   background-color: white;
-  min-width: 130px;
+  min-width: 280px;
   box-shadow: 2px 6px 23px 2px rgba(0, 0, 0, 0.04);
   z-index: 1;
+  margin: 0 -50px;
 }
 @media only screen and (max-width: 430px) {
   .dropdown-content {
@@ -823,20 +890,51 @@ header nav a {
 
 .dropdown-content a {
   color: black;
-  padding: 12px;
+  padding: 14px 10px 14px 24px;
   text-decoration: none;
+  line-height: 156%;
   display: block;
   margin: 0;
-  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+}
+.dropdown-content a span {
+  background-color: #f0efef;
+  font-weight: 400;
+  border: 1px solid #eaeaea;
+  color: black;
+  font-size: small;
+  padding: 2px 6px;
+  margin-right: 4px;
+  border-radius: 6px;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
 }
 
 .dropdown-content a:hover {
-  background-color: #eaeaea;
+  background-color: #f0efef;
   color: black;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+span.tag-1 {
+  background-color: lightgoldenrodyellow !important;
+}
+
+span.tag-2 {
+  background-color: lightcyan !important;
+}
+
+span.tag-3 {
+  background-color: rgb(250, 229, 232) !important;
+}
+
+span.tag-4 {
+  background-color: #f0efef !important;
 }
 
 footer {
