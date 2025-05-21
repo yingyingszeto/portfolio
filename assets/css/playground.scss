@@ -1,18 +1,15 @@
 body#playground {
-    grid-template-rows: 120px auto 9%;
-    @media only screen and (max-width: 430px) {
-        grid-template-rows: 10% auto 5%;
-    }
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1200px 1fr;
 }
 
 #section-playground {
-    width: 800px;
+
     margin: auto;
-    
+    margin-top: 120px;
     h1 {
         @include body_large;
         font-weight: 600;
-        margin-bottom: 5%;
         span {
             font-family: 'Archer';
         }
@@ -20,13 +17,86 @@ body#playground {
     h3 {
         @include body_medium;
         font-weight: 600;
-        padding-bottom: 1%;
     }
     p {
         @include body_small;
         line-height: 180%;
-        margin-bottom: 5%;
     }
    
     text-align: inherit;
 }
+
+/* For flexbox effect */
+/*
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 10px;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+.img-width-x {
+    width: 90%;
+}
+
+.img-width-m {
+    width: 90%;
+}
+
+.img-width-s {
+    width: 90%;
+}
+*/
+/* img filtering */
+
+#section-playground {
+    img {
+        float: left;
+        Width: 30%;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.img-filter {
+  display: none;    
+}
+
+.show {
+  display: block;
+}
+
+#myBtnContainer {
+    margin: 3% 0 2% 0;
+
+    button {
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 6px 14px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 4px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: $color_hover;
+        border: 1px solid $color_hover;
+    }
+    
+}
+
