@@ -1,22 +1,28 @@
 body#about {
-    grid-template-rows: 120px auto 9%;
+    grid-template-rows: $page-top-space auto $page-bottom-space;
     @media only screen and (max-width: 430px) {
-        grid-template-rows: 10% auto 5%;
+        grid-template-rows: 140px auto $page-bottom-space;
     }
 }
 
 #section-about {
     width: 800px;
     margin: auto;
+    @media only screen and (max-width: 800px) {
+        width: 100%;
+    }
     
     h1 {
         @include body_large;
+        font-family: 'Archer';
         font-weight: 600;
         margin-bottom: 5%;
+         @media only screen and (max-width: 430px) {
+            margin-bottom: 10%;
+        }
     }
     h3 {
         @include body_medium;
-        font-family: 'Archer';
         line-height: 190%;
         font-weight: 600;
         padding-bottom: 1%;
@@ -25,6 +31,9 @@ body#about {
         @include body_small;
         line-height: 180%;
         margin-bottom: 5%;
+        @media only screen and (max-width: 430px) {
+            margin-bottom: 10%;
+        }
     }
    
     text-align: inherit;
