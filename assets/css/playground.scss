@@ -1,15 +1,26 @@
 body#playground {
-    grid-template-rows: none;
-    grid-template-columns: 1fr 1200px 1fr;
+    grid-template-rows: $page-top-space auto $page-bottom-space;
+     @media only screen and (max-width: 430px) {
+        grid-template-rows: 140px auto $page-bottom-space;
+    }
 }
 
 #section-playground {
-
     margin: auto;
-    margin-top: 120px;
+    width: 1200px;
+    @media only screen and (max-width: 1200px) {
+        width: 800px;
+    }
+    @media only screen and (max-width: 800px) {
+        width: 100%;
+    }
     h1 {
         @include body_large;
         font-weight: 600;
+        margin-bottom: 1%;
+        @media only screen and (max-width: 430px) {
+            margin-bottom: 4%;
+        }
         span {
             font-family: 'Archer';
         }
@@ -66,6 +77,13 @@ body#playground {
         Width: 30%;
         margin-right: 30px;
         margin-bottom: 30px;
+
+        @media only screen and (max-width: 1200px) {
+            width: 45%;
+        }
+        @media only screen and (max-width: 430px) {
+            width: 100%;
+        }
     }
 }
 
@@ -80,6 +98,10 @@ body#playground {
 #myBtnContainer {
     margin: 3% 0 2% 0;
 
+    @media only screen and (max-width: 430px) {
+        margin: 4% 0;
+    }
+
     button {
         background-color: white;
         border: 1px solid black;
@@ -89,6 +111,7 @@ body#playground {
         text-decoration: none;
         display: inline-block;
         margin-right: 4px;
+        margin-bottom: 2%;
         transition-duration: 0.4s;
         cursor: pointer;
     }
