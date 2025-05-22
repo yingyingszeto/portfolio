@@ -34,7 +34,7 @@ section {
         grid-template-rows: 2.4fr 8fr;
     }
     @media only screen and (max-width: 430px) {
-        grid-template-rows: 2.4fr 6fr;
+        grid-template-rows: 3fr 6fr;
     }
     grid-template-areas:
     "gridContainer_intro"
