@@ -177,7 +177,7 @@ section {
 }
 @media only screen and (max-width: 430px) {
   #section-index {
-    grid-template-rows: 2.4fr 6fr;
+    grid-template-rows: 3fr 6fr;
   }
 }
 
@@ -209,11 +209,11 @@ footer {
 
 /* page */
 body#index {
-  grid-template-rows: 80px auto 9%;
+  grid-template-rows: 80px auto 180px;
 }
 @media only screen and (max-width: 430px) {
   body#index {
-    grid-template-rows: 10% auto 5%;
+    grid-template-rows: 100px auto 180px;
   }
 }
 
@@ -244,6 +244,11 @@ body#index {
 }
 #section-index div#gridContainer_intro p:first-child {
   font-size: 48px;
+}
+@media only screen and (max-width: 430px) {
+  #section-index div#gridContainer_intro p:first-child {
+    font-size: 38px;
+  }
 }
 #section-index div#gridContainer_intro p:first-child span {
   font-family: "Archer";
@@ -294,6 +299,7 @@ body#index {
   font-weight: 300;
   color: #000000;
   line-height: 160%;
+  line-height: 130%;
   color: #000000;
   padding: 3%;
 }
@@ -372,11 +378,11 @@ body#index {
 }
 
 body#about {
-  grid-template-rows: 120px auto 9%;
+  grid-template-rows: 120px auto 180px;
 }
 @media only screen and (max-width: 430px) {
   body#about {
-    grid-template-rows: 10% auto 5%;
+    grid-template-rows: 140px auto 180px;
   }
 }
 
@@ -385,20 +391,31 @@ body#about {
   margin: auto;
   text-align: inherit;
 }
+@media only screen and (max-width: 800px) {
+  #section-about {
+    width: 100%;
+  }
+}
 #section-about h1 {
   font: 36px "Apercu";
   font-weight: 300;
   color: #000000;
   line-height: 160%;
+  line-height: 130%;
+  font-family: "Archer";
   font-weight: 600;
   margin-bottom: 5%;
+}
+@media only screen and (max-width: 430px) {
+  #section-about h1 {
+    margin-bottom: 10%;
+  }
 }
 #section-about h3 {
   font: 24px "Apercu";
   font-weight: 300;
   color: #000000;
   line-height: 160%;
-  font-family: "Archer";
   line-height: 190%;
   font-weight: 600;
   padding-bottom: 1%;
@@ -420,23 +437,49 @@ body#about {
     line-height: 160%;
   }
 }
+@media only screen and (max-width: 430px) {
+  #section-about p {
+    margin-bottom: 10%;
+  }
+}
 
 body#playground {
-  grid-template-rows: none;
-  grid-template-columns: 1fr 1200px 1fr;
+  grid-template-rows: 120px auto 180px;
+}
+@media only screen and (max-width: 430px) {
+  body#playground {
+    grid-template-rows: 140px auto 180px;
+  }
 }
 
 #section-playground {
   margin: auto;
-  margin-top: 120px;
+  width: 1200px;
   text-align: inherit;
+}
+@media only screen and (max-width: 1200px) {
+  #section-playground {
+    width: 800px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #section-playground {
+    width: 100%;
+  }
 }
 #section-playground h1 {
   font: 36px "Apercu";
   font-weight: 300;
   color: #000000;
   line-height: 160%;
+  line-height: 130%;
   font-weight: 600;
+  margin-bottom: 1%;
+}
+@media only screen and (max-width: 430px) {
+  #section-playground h1 {
+    margin-bottom: 4%;
+  }
 }
 #section-playground h1 span {
   font-family: "Archer";
@@ -504,6 +547,16 @@ body#playground {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+@media only screen and (max-width: 1200px) {
+  #section-playground img {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  #section-playground img {
+    width: 100%;
+  }
+}
 
 .img-filter {
   display: none;
@@ -516,6 +569,11 @@ body#playground {
 #myBtnContainer {
   margin: 3% 0 2% 0;
 }
+@media only screen and (max-width: 430px) {
+  #myBtnContainer {
+    margin: 4% 0;
+  }
+}
 #myBtnContainer button {
   background-color: white;
   border: 1px solid black;
@@ -525,6 +583,7 @@ body#playground {
   text-decoration: none;
   display: inline-block;
   margin-right: 4px;
+  margin-bottom: 2%;
   transition-duration: 0.4s;
   cursor: pointer;
 }
@@ -550,7 +609,7 @@ body {
 }
 @media only screen and (max-width: 430px) {
   body {
-    grid-template-rows: 3% auto 5%;
+    grid-template-rows: 130px auto 180px;
   }
 }
 
@@ -589,6 +648,11 @@ img {
 }
 
 /* Title section of case study */
+@media only screen and (max-width: 430px) {
+  #case-title {
+    margin-bottom: 40px;
+  }
+}
 #case-title div:first-child {
   font: 54px "Apercu";
   font-weight: 300;
@@ -646,7 +710,7 @@ img {
   color: #000000;
   line-height: 160%;
   font-weight: 300;
-  margin-bottom: 4%;
+  margin-bottom: 16px;
 }
 @media only screen and (max-width: 430px) {
   .title-text {
@@ -690,7 +754,7 @@ img {
 }
 @media only screen and (max-width: 430px) {
   .grid-container {
-    margin: 0 auto 15% auto;
+    margin: 0 auto 80px auto;
   }
 }
 
@@ -716,6 +780,11 @@ img {
     margin-bottom: 7%;
   }
 }
+@media only screen and (max-width: 430px) {
+  .col-2 .responsive-space {
+    margin-bottom: 40px;
+  }
+}
 
 .col-3 {
   grid-template-columns: 1fr 1fr 1fr;
@@ -733,7 +802,7 @@ img {
 }
 @media only screen and (max-width: 430px) {
   .add-space {
-    margin-bottom: 15%;
+    margin-bottom: 80px;
   }
 }
 
@@ -796,6 +865,7 @@ header #brand-logo {
 @media only screen and (max-width: 430px) {
   header #brand-logo {
     float: none;
+    font-size: 28px;
   }
 }
 header nav {
@@ -859,9 +929,12 @@ header nav a {
   position: relative;
   display: inline-block;
 }
-.dropdown a > i {
+.dropdown div:first-child {
+  cursor: default;
+}
+.dropdown div > i {
   margin-left: 6px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .dropdown-content {
@@ -885,6 +958,11 @@ header nav a {
     font-weight: 300;
     color: #000000;
     line-height: 160%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .dropdown-content {
+    margin: 0;
   }
 }
 
@@ -961,17 +1039,6 @@ footer .moving-text div {
 footer .moving-text span {
   float: left;
   width: 50%;
-  font-size: "Apercu";
-}
-@media only screen and (max-width: 600px) {
-  footer .moving-text span {
-    font-size: 7vw;
-  }
-}
-@media only screen and (max-width: 414px) {
-  footer .moving-text span {
-    font-size: 7.3vw;
-  }
 }
 @-webkit-keyframes marquee {
   0% {
