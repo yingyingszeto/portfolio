@@ -1,7 +1,7 @@
 body#index {
-    grid-template-rows: 80px auto 9%;
+    grid-template-rows: 80px auto $page-bottom-space;
     @media only screen and (max-width: 430px) {
-        grid-template-rows: 10% auto 5%;
+        grid-template-rows: 100px auto $page-bottom-space;
     }
 }
 
@@ -26,6 +26,9 @@ body#index {
 
         p:first-child {
             font-size: 48px;
+            @media only screen and (max-width: 430px) {
+                font-size: 38px;
+            }
             span {
                 font-family: "Archer";
                 font-weight: bold;
