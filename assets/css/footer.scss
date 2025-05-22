@@ -24,13 +24,6 @@ footer {
     .moving-text span {
         float: left;
         width: 50%;
-        font-size: $font_body;
-        @media only screen and (max-width: 600px) {
-            font-size: 7vw;
-        }
-        @media only screen and (max-width: 414px) {
-            font-size: 7.3vw;
-        }
     }
       
     @-webkit-keyframes marquee {
