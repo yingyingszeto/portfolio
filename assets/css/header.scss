@@ -13,6 +13,7 @@ header {
         }
         @media only screen and (max-width: 430px) {
             float: none;
+            font-size: 28px;
         }
     }
     nav {
@@ -26,7 +27,6 @@ header {
             margin-left: 30px;
             @media only screen and (max-width: 430px) {
                 margin-left: 20px;
-                
             }
         }
        
@@ -63,23 +63,30 @@ nav a:first-child {
 .dropdown {
   position: relative;
   display: inline-block;
+    div:first-child {
+        cursor: default;
+    }
 
-  a > i {
+  div > i {
     margin-left: 6px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 .dropdown-content {
   @include body_small;
     display: none;
-  position: absolute;
-  line-height: 140%;
-  background-color: white;
-  min-width: 280px;
-  box-shadow: 2px 6px 23px 2px rgb(0 0 0 / 4%);
-  z-index: 1;
-  margin: 0 -50px;
+    position: absolute;
+    line-height: 140%;
+    background-color: white;
+    min-width: 280px;
+    box-shadow: 2px 6px 23px 2px rgb(0 0 0 / 4%);
+    z-index: 1;
+    margin: 0 -50px;
+
+  @media only screen and (max-width: 430px) {
+            margin: 0;
+        }
 }
 
 .dropdown-content { 
