@@ -17,6 +17,7 @@ $font_body: 'Apercu';
 
 @mixin body_large {
     @include body(36px);
+    line-height: 130%;
 }
 
 @mixin body_xm {
