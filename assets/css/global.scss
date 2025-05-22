@@ -1,3 +1,6 @@
+$page-top-space: 120px;
+$page-bottom-space: 180px;
+
 @mixin hover-link {
     color: $color_hover;
     transition: all ease .3s;
