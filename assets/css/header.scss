@@ -79,7 +79,7 @@ nav a:first-child {
     position: absolute;
     line-height: 140%;
     background-color: white;
-    min-width: 280px;
+    min-width: 170px;
     box-shadow: 2px 6px 23px 2px rgb(0 0 0 / 4%);
     z-index: 1;
     margin: 0 -50px;
@@ -92,9 +92,10 @@ nav a:first-child {
 .dropdown-content { 
     a {
         color: black;
-        padding: 14px 10px 14px 24px;
+        padding: 18px 0;
         text-decoration: none;
         line-height: 156%;
+        text-align: center;
         display: block;
         margin: 0;
         border-bottom: 1px solid $lightgrey;
