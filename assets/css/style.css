@@ -147,7 +147,7 @@ section a:hover {
 .float {
   position: fixed;
   bottom: 40px;
-  border-radius: 10px;
+  border-radius: 100px;
   background-color: #333333;
   right: 40px;
   color: #fff;
@@ -156,7 +156,9 @@ section a:hover {
   font-weight: 600;
   padding: 12px 24px 20px 24px;*/
   box-shadow: 0px 0px 15px #e1e1e1;
-  padding: 14px;
+  width: 70px;
+  height: 70px;
+  font-size: 26px;
   z-index: 100;
   /*button {
     background-color: white;
