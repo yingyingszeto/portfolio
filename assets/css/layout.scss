@@ -4,7 +4,7 @@ $page-small: 70%;*/
 
 body {
     display: grid;
-    grid-template-rows: 70px auto 100px;
+    grid-template-rows: 70px auto 160px;
     grid-template-columns: 1fr 90% 1fr;
     grid-template-areas:
     "header header header"
