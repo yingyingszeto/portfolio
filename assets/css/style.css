@@ -183,7 +183,7 @@ $page-medium: 80%;
 $page-small: 70%;*/
 body {
   display: grid;
-  grid-template-rows: 70px auto 100px;
+  grid-template-rows: 70px auto 160px;
   grid-template-columns: 1fr 90% 1fr;
   grid-template-areas: "header header header" ". section ." "footer footer footer";
 }
@@ -297,36 +297,12 @@ body#index {
   font-weight: bold;
 }
 #section-index div#gridContainer_intro p:nth-child(2) {
-  font: 18px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  letter-spacing: 0.5px;
+  font-size: 18px;
   margin-top: 5%;
-}
-@media only screen and (max-width: 430px) {
-  #section-index div#gridContainer_intro p:nth-child(2) {
-    font: 18px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 160%;
-  }
 }
 #section-index div#gridContainer_intro p:nth-child(3) {
-  font: 18px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  letter-spacing: 0.5px;
+  font-size: 18 px;
   margin-top: 5%;
-}
-@media only screen and (max-width: 430px) {
-  #section-index div#gridContainer_intro p:nth-child(3) {
-    font: 18px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 160%;
-  }
 }
 #section-index div#gridContainer_intro #social {
   margin: 5% 0;
@@ -752,7 +728,6 @@ img {
   color: #000000;
   line-height: 160%;
   font-weight: 300;
-  margin-bottom: 16px;
 }
 @media only screen and (max-width: 430px) {
   .title-text {
