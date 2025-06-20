@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "Cosi Azure";
   src: url("CosiAzure-Bold.woff"), url("CosiAzure-Bold.woff") format("opentype");
@@ -50,6 +51,12 @@
   font-family: "Archer";
   src: url("ArcherSemiboldPro.woff"), url("ArcherSemiboldPro.otf") format("opentype");
   font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("Sequel-Sans_Semi-Bold-Body.woff"), url("Sequel-Sans_Semi-Bold-Body.otf") format("opentype");
+  font-weight: 600;
   font-style: normal;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -136,12 +143,45 @@ section a:hover {
   background-color: white;
 }
 
+/* floating button */
+.float {
+  position: fixed;
+  bottom: 40px;
+  border-radius: 10px;
+  background-color: #333333;
+  right: 40px;
+  color: #fff;
+  text-align: center;
+  /*line-height: 42px;
+  font-weight: 600;
+  padding: 12px 24px 20px 24px;*/
+  box-shadow: 0px 0px 15px #e1e1e1;
+  padding: 14px;
+  z-index: 100;
+  /*button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 400;
+  }*/
+}
+
+.float:hover {
+  background-color: #040861;
+}
+
+.my-float {
+  margin-top: 22px;
+}
+
 /*$page-wide: 90%;
 $page-medium: 80%;
 $page-small: 70%;*/
 body {
   display: grid;
-  grid-template-rows: 160px auto 4%;
+  grid-template-rows: 70px auto 100px;
   grid-template-columns: 1fr 90% 1fr;
   grid-template-areas: "header header header" ". section ." "footer footer footer";
 }
@@ -627,7 +667,7 @@ body {
 }
 
 .page-width-s {
-  width: 70%;
+  width: 800 px;
 }
 @media only screen and (max-width: 768px) {
   .page-width-s {
@@ -841,6 +881,166 @@ hr {
 
 .more-project-img > a:hover {
   cursor: url("https://raw.githubusercontent.com/yingyingszeto/forLinks/master/cursor.svg"), auto;
+}
+
+/* New style start here */
+h1, h2, h3, h4 {
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.case-study-content {
+  width: 680px;
+  margin: auto;
+  font-size: 20px;
+  color: #555555;
+}
+.case-study-content div {
+  margin-bottom: 60px;
+}
+.case-study-content hr {
+  margin-bottom: 60px;
+}
+.case-study-content img {
+  margin-top: 40px;
+}
+
+/* case title */
+.case-study-title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.case-study-title p {
+  margin-top: 12px;
+  color: #777777;
+}
+
+ul.bullet-points {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+ul.bullet-points li {
+  margin-bottom: 6px;
+}
+
+ul.bullet-points:last-child {
+  margin-bottom: 0px !important;
+}
+
+li::marker {
+  font-size: 22px;
+}
+
+ul.numeric-points {
+  list-style-type: decimal;
+  padding-left: 40px;
+}
+ul.numeric-points li {
+  margin-bottom: 6px;
+}
+
+.bold-text {
+  font-weight: 800;
+}
+
+figcaption {
+  font-size: 14px;
+  margin: -7px 0;
+  text-align: center;
+}
+
+.col-2-container {
+  display: flex;
+}
+.col-2-container figure {
+  width: 48%;
+}
+
+.col-2-left {
+  margin-left: auto;
+}
+
+.quote p {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.quote blockquote {
+  margin-bottom: 50px;
+  border-left: 6px solid #fc4e5f;
+  padding-left: 20px;
+  font-style: italic;
+}
+
+svg.moving-arrow {
+  width: 16px;
+  margin-left: 6px;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 3px, 0);
+    transform: translate3d(0, 3px, 0);
+  }
+  90% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -3px, 0);
+    transform: translate3d(0, -3px, 0);
+  }
+}
+.process {
+  text-align: center;
+  padding: 2px 0;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.case-study-section h3 {
+  margin-top: 40px;
+}
+.case-study-section b {
+  font-weight: bold;
+}
+
+.outcome {
+  background-color: #f3f3f3;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.outcome-space {
+  margin: 14px 0;
 }
 
 /* organisms */
