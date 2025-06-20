@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
     font-family: "Cosi Azure";
     src:
@@ -69,6 +71,14 @@
     src:    url("ArcherSemiboldPro.woff"),
             url('ArcherSemiboldPro.otf') format('opentype');
     font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sequel Sans";
+    src:    url("Sequel-Sans_Semi-Bold-Body.woff"),
+            url('Sequel-Sans_Semi-Bold-Body.otf') format('opentype');
+    font-weight: 600;
     font-style: normal;
 }
 
