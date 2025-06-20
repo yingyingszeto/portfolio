@@ -9,3 +9,37 @@ $page-bottom-space: 180px;
 .background-color {
     background-color: $background-color;
 }
+
+/* floating button */
+.float{
+	position:fixed;
+	bottom: 40px;
+    border-radius: 10px;
+    background-color: #333333;
+	right:40px;
+	color: #fff;
+	text-align:center;
+    /*line-height: 42px;
+    font-weight: 600;
+    padding: 12px 24px 20px 24px;*/
+    box-shadow: 0px 0px 15px #e1e1e1;
+    padding: 14px;
+    z-index: 100;
+
+  /*button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 400;
+  }*/
+}
+
+.float:hover {
+    background-color: #040861;
+}
+
+.my-float{
+	margin-top:22px;
+}
