@@ -133,7 +133,6 @@ $accent_3: #C31162;
 /* body */
 section a {
   text-decoration: underline;
-  text-decoration-color: lightcoral;
 }
 section a:hover {
   color: #616580;
@@ -150,7 +149,6 @@ section a:hover {
   border-radius: 100px;
   background-color: #333333;
   right: 40px;
-  color: #fff;
   text-align: center;
   /*line-height: 42px;
   font-weight: 600;
@@ -176,6 +174,7 @@ section a:hover {
 
 .my-float {
   margin-top: 22px;
+  color: #fff;
 }
 
 /*$page-wide: 90%;
@@ -722,22 +721,6 @@ img {
 }
 
 /* text style */
-.title-text {
-  font: 26px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  font-weight: 300;
-}
-@media only screen and (max-width: 430px) {
-  .title-text {
-    font: 24px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 160%;
-  }
-}
-
 .text {
   font: 18px "Apercu";
   font-weight: 300;
@@ -839,12 +822,12 @@ hr {
   padding: 0;
 }
 
-.more-project {
-  margin-bottom: 4%;
-}
-
 .more-project-img {
   margin: auto;
+  margin-top: 80px;
+}
+.more-project-img h3 {
+  text-align: center;
 }
 .more-project-img a > img {
   width: 48%;
@@ -1018,6 +1001,12 @@ svg.moving-arrow {
 
 .outcome-space {
   margin: 14px 0;
+}
+
+div.product-link a i {
+  float: left;
+  font-size: 30px;
+  margin-right: 11px;
 }
 
 /* organisms */
