@@ -5,11 +5,12 @@ body {
   @include body_small;
     @media only screen and (max-width: 430px) {
         grid-template-rows: 130px auto $page-bottom-space;
+        line-height: 180%;
     }
 }
 
 
-.page-width-l {
+/*.page-width-l {
   width: 90%;
   @media only screen and (max-width: 768px) {
     width: 100%;
@@ -33,14 +34,14 @@ body {
 
 .page-width-xxs {
   width: 50%
-}
+}*/
 
 img {
   width: 100%;
 }
 
 /* Title section of case study */
-#case-title {
+/*#case-title {
   @media only screen and (max-width: 430px) {
     margin-bottom: 40px;
   }
@@ -57,12 +58,12 @@ img {
 }
 
 /* Intro para of case study */
-#case-intro {
+/*#case-intro {
   @include body_xm;
 }
 
 /* role section */
-#case-role {
+/*#case-role {
   text-align: center;
   div > p::first-line {
     font-weight: bold;
@@ -70,7 +71,7 @@ img {
 }
 /* text style */
 
-.text {
+/*/*.text {
   @include body_small;
 }
 
@@ -82,7 +83,7 @@ img {
 
 /* Layouts */
 
-.grid-container {
+/*.grid-container {
     display: grid;
     justify-content:center;
     margin: 0 auto $section-between-space auto;
@@ -145,7 +146,7 @@ img {
     display:flex;
     flex-direction: column-reverse;
   }
-}
+}*/
 
 hr {
   display: block;
@@ -156,10 +157,13 @@ hr {
   padding: 0;
 }
 
-
-.more-project-img {
+.more-project {
     margin: auto;
     margin-top: 80px;;
+    width: 70%;
+    @media only screen and (max-width: 430px) {
+      width: 100%;
+    }
     h3 {
       text-align: center;
     }
@@ -172,7 +176,7 @@ hr {
   }
 }
 
-.more-project-img > a:hover {
+.more-project > a:hover {
       cursor: url("https://raw.githubusercontent.com/yingyingszeto/forLinks/master/cursor.svg"), auto;
 }
 
@@ -205,21 +209,33 @@ h4 {
 }
 
 .case-study-content {
-  width: 680px;
+  width: 740px;
   margin: auto;
+
+  @media only screen and (max-width: 430px) {
+    width: inherit;
+  }
   
   font-size: 20px;
   color:#555555;
 
-  div { margin-bottom: 60px; }
-  hr { margin-bottom: 60px; }
-  img { margin-top: 40px; }
+  div { 
+    margin-bottom: 80px;
+    @media only screen and (max-width: 430px) {
+      margin-bottom: 50px;
+    }
+  }
+  hr { margin-bottom: 80px; }
+  img { margin-top: 50px; }
 }
 
 /* case title */
 .case-study-title {
-  margin-bottom: 60px;
+  margin: 90px 0 60px 0;
   text-align: center;
+  @media only screen and (max-width: 430px) {
+      margin: 60px 0 60px 0;
+  }
 
   p {
       margin-top: 12px;
@@ -266,6 +282,13 @@ figcaption {
 
   figure {
     width: 48%;
+  }
+
+  @media only screen and (max-width: 430px) {
+    display: contents;
+      figure {
+        width: 100%;
+    }
   }
 }
 
@@ -320,10 +343,7 @@ svg.moving-arrow {
 
 .process {
   text-align: center;
-
-  padding: 2px 0;
-  font-weight: 800;
-  font-size: 18px;
+  background-color: #f7f7f7;
 }
 
 .case-study-section {
@@ -354,5 +374,10 @@ div.product-link {
     margin-right: 11px;
     }
   }
-  
+}
+
+ul {
+  list-style: auto;
+  margin-left: 40px;
+  margin-top: 10px;
 }
