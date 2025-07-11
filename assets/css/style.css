@@ -177,9 +177,6 @@ section a:hover {
   color: #fff;
 }
 
-/*$page-wide: 90%;
-$page-medium: 80%;
-$page-small: 70%;*/
 body {
   display: grid;
   grid-template-rows: 70px auto 160px;
@@ -300,7 +297,7 @@ body#index {
   margin-top: 5%;
 }
 #section-index div#gridContainer_intro p:nth-child(3) {
-  font-size: 18 px;
+  font-size: 18px;
   margin-top: 5%;
 }
 #section-index div#gridContainer_intro #social {
@@ -627,14 +624,13 @@ body {
 @media only screen and (max-width: 430px) {
   body {
     grid-template-rows: 130px auto 180px;
+    line-height: 180%;
   }
 }
 
-.page-width-l {
+/*.page-width-l {
   width: 90%;
-}
-@media only screen and (max-width: 768px) {
-  .page-width-l {
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 }
@@ -645,118 +641,74 @@ body {
 
 .page-width-s {
   width: 800 px;
-}
-@media only screen and (max-width: 768px) {
-  .page-width-s {
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 }
 
 .page-width-xs {
-  width: 60%;
+  width: 60%
 }
 
 .page-width-xxs {
-  width: 50%;
-}
-
+  width: 50%
+}*/
 img {
   width: 100%;
 }
 
 /* Title section of case study */
-@media only screen and (max-width: 430px) {
-  #case-title {
+/*#case-title {
+  @media only screen and (max-width: 430px) {
     margin-bottom: 40px;
   }
-}
-#case-title div:first-child {
-  font: 54px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-}
-@media only screen and (max-width: 430px) {
-  #case-title div:first-child {
-    font-size: 48px;
+
+  div:first-child {
+    @include body_xl;
+    @media only screen and (max-width: 430px) {
+      font-size: 48px;
+    }
   }
-}
-#case-title div:nth-child(2) {
-  font: 26px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-}
-@media only screen and (max-width: 430px) {
-  #case-title div:nth-child(2) {
-    font: 24px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 160%;
+  div:nth-child(2) {
+    @include body_xm;
   }
 }
 
 /* Intro para of case study */
-#case-intro {
-  font: 26px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-}
-@media only screen and (max-width: 430px) {
-  #case-intro {
-    font: 24px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 160%;
-  }
+/*#case-intro {
+  @include body_xm;
 }
 
 /* role section */
-#case-role {
+/*#case-role {
   text-align: center;
-}
-#case-role div > p::first-line {
-  font-weight: bold;
-}
-
-/* text style */
-.text {
-  font: 18px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  letter-spacing: 0.5px;
-}
-@media only screen and (max-width: 430px) {
-  .text {
-    font: 18px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 160%;
+  div > p::first-line {
+    font-weight: bold;
   }
+}
+/* text style */
+/*/*.text {
+  @include body_small;
 }
 
 .label {
-  Color: #616580;
+  Color: $color_hover;
   margin-bottom: 2%;
   letter-spacing: 1.5px;
 }
 
 /* Layouts */
-.grid-container {
-  display: grid;
-  justify-content: center;
-  margin: 0 auto 7% auto;
-}
-.grid-container div {
-  height: auto;
-}
-@media only screen and (max-width: 430px) {
-  .grid-container {
-    margin: 0 auto 80px auto;
+/*.grid-container {
+    display: grid;
+    justify-content:center;
+    margin: 0 auto $section-between-space auto;
+    div {
+      height: auto;
+    }
+  @media only screen and (max-width: 430px) {
+    margin: 0 auto $section-between-space-responsive auto;  
   }
-}
+  }
 
 .col-1 {
   margin-left: auto;
@@ -768,21 +720,20 @@ img {
   gap: 6%;
   margin-left: auto;
   margin-right: auto;
-}
-@media only screen and (max-width: 768px) {
-  .col-2 {
+
+  @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 0%;
+    gap: 0%
   }
-}
-@media only screen and (max-width: 768px) {
-  .col-2 .responsive-space {
-    margin-bottom: 7%;
-  }
-}
-@media only screen and (max-width: 430px) {
-  .col-2 .responsive-space {
-    margin-bottom: 40px;
+
+  .responsive-space {
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 7% ;
+    }
+
+    @media only screen and (max-width: 430px) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -798,21 +749,19 @@ img {
 }
 
 .add-space {
-  margin-bottom: 7%;
-}
-@media only screen and (max-width: 430px) {
-  .add-space {
-    margin-bottom: 80px;
+  margin-bottom: $section-between-space;
+  @media only screen and (max-width: 430px) {
+    margin-bottom: $section-between-space-responsive; 
   }
+
 }
 
-@media only screen and (max-width: 768px) {
-  .col-reverse {
-    display: flex;
+.col-reverse {
+  @media only screen and (max-width: 768px) { 
+    display:flex;
     flex-direction: column-reverse;
   }
-}
-
+}*/
 hr {
   display: block;
   height: 1px;
@@ -822,24 +771,30 @@ hr {
   padding: 0;
 }
 
-.more-project-img {
+.more-project {
   margin: auto;
   margin-top: 80px;
+  width: 70%;
 }
-.more-project-img h3 {
+@media only screen and (max-width: 430px) {
+  .more-project {
+    width: 100%;
+  }
+}
+.more-project h3 {
   text-align: center;
 }
-.more-project-img a > img {
+.more-project a > img {
   width: 48%;
   padding: 3px;
 }
 @media only screen and (max-width: 430px) {
-  .more-project-img a > img {
+  .more-project a > img {
     width: 100%;
   }
 }
 
-.more-project-img > a:hover {
+.more-project > a:hover {
   cursor: url("https://raw.githubusercontent.com/yingyingszeto/forLinks/master/cursor.svg"), auto;
 }
 
@@ -871,25 +826,40 @@ h4 {
 }
 
 .case-study-content {
-  width: 680px;
+  width: 740px;
   margin: auto;
   font-size: 20px;
   color: #555555;
 }
+@media only screen and (max-width: 430px) {
+  .case-study-content {
+    width: inherit;
+  }
+}
 .case-study-content div {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+}
+@media only screen and (max-width: 430px) {
+  .case-study-content div {
+    margin-bottom: 50px;
+  }
 }
 .case-study-content hr {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 .case-study-content img {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 /* case title */
 .case-study-title {
-  margin-bottom: 60px;
+  margin: 90px 0 60px 0;
   text-align: center;
+}
+@media only screen and (max-width: 430px) {
+  .case-study-title {
+    margin: 60px 0 60px 0;
+  }
 }
 .case-study-title p {
   margin-top: 12px;
@@ -936,6 +906,14 @@ figcaption {
 .col-2-container figure {
   width: 48%;
 }
+@media only screen and (max-width: 430px) {
+  .col-2-container {
+    display: contents;
+  }
+  .col-2-container figure {
+    width: 100%;
+  }
+}
 
 .col-2-left {
   margin-left: auto;
@@ -980,9 +958,7 @@ svg.moving-arrow {
 }
 .process {
   text-align: center;
-  padding: 2px 0;
-  font-weight: 800;
-  font-size: 18px;
+  background-color: #f7f7f7;
 }
 
 .case-study-section h3 {
@@ -1007,6 +983,12 @@ div.product-link a i {
   float: left;
   font-size: 30px;
   margin-right: 11px;
+}
+
+ul {
+  list-style: auto;
+  margin-left: 40px;
+  margin-top: 10px;
 }
 
 /* organisms */
