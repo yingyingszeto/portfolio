@@ -6,31 +6,28 @@ body#about {
 }
 
 #section-about {
-    width: 800px;
+    width: 740px;
     margin: auto;
     @media only screen and (max-width: 800px) {
         width: 100%;
     }
-    
+
     h1 {
-        @include body_large;
-        font-family: 'Archer';
-        font-weight: 600;
         margin-bottom: 5%;
+        color: #333333;
          @media only screen and (max-width: 430px) {
             margin-bottom: 10%;
         }
     }
+
     h3 {
-        @include body_medium;
-        line-height: 190%;
-        font-weight: 600;
         padding-bottom: 1%;
+        color: #333333;
     }
+
     p {
-        @include body_small;
-        line-height: 180%;
         margin-bottom: 5%;
+        color:#555555;
         @media only screen and (max-width: 430px) {
             margin-bottom: 10%;
         }
