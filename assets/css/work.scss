@@ -160,10 +160,11 @@ hr {
 .more-project {
     margin: auto;
     margin-top: 80px;;
-    width: 70%;
-    @media only screen and (max-width: 430px) {
+    width: 90%;
+     @media only screen and (max-width: 800px) {
       width: 100%;
     }
+   
     h3 {
       text-align: center;
     }
@@ -212,7 +213,7 @@ h4 {
   width: 740px;
   margin: auto;
 
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 800px) {
     width: inherit;
   }
   
@@ -221,7 +222,7 @@ h4 {
 
   div { 
     margin-bottom: 80px;
-    @media only screen and (max-width: 430px) {
+    @media only screen and (max-width: 800px) {
       margin-bottom: 50px;
     }
   }
@@ -233,7 +234,7 @@ h4 {
 .case-study-title {
   margin: 90px 0 60px 0;
   text-align: center;
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 800px) {
       margin: 60px 0 60px 0;
   }
 
