@@ -183,6 +183,11 @@ body {
   grid-template-columns: 1fr 90% 1fr;
   grid-template-areas: "header header header" ". section ." "footer footer footer";
 }
+@media only screen and (max-width: 620px) {
+  body {
+    grid-template-rows: 140px auto 160px;
+  }
+}
 
 header {
   grid-area: header;
@@ -200,6 +205,11 @@ section {
 @media only screen and (max-width: 800px) {
   #section-index {
     grid-template-rows: 2.4fr 8fr;
+  }
+}
+@media only screen and (max-width: 620px) {
+  #section-index {
+    grid-template-rows: 2.4fr 8.8fr;
   }
 }
 @media only screen and (max-width: 430px) {
@@ -238,9 +248,14 @@ footer {
 body#index {
   grid-template-rows: 80px auto 180px;
 }
+@media only screen and (max-width: 620px) {
+  body#index {
+    grid-template-rows: 140px auto 60px;
+  }
+}
 @media only screen and (max-width: 430px) {
   body#index {
-    grid-template-rows: 100px auto 180px;
+    grid-template-rows: 100px auto 120px;
   }
 }
 
@@ -260,6 +275,7 @@ body#index {
 }
 #section-index div#gridContainer_intro {
   margin: auto;
+  color: #333;
 }
 #section-index div#gridContainer_intro span {
   font-weight: 600;
@@ -271,6 +287,11 @@ body#index {
 }
 #section-index div#gridContainer_intro p:first-child {
   font-size: 48px;
+}
+@media only screen and (max-width: 620px) {
+  #section-index div#gridContainer_intro p:first-child {
+    font-size: 44px;
+  }
 }
 @media only screen and (max-width: 430px) {
   #section-index div#gridContainer_intro p:first-child {
@@ -300,10 +321,10 @@ body#index {
 #section-index div#gridContainer_intro #social a {
   font: 36px "Apercu";
   font-weight: 300;
-  color: #000000;
+  color: #555;
   line-height: 160%;
   line-height: 130%;
-  color: #000000;
+  color: #555;
   padding: 3%;
 }
 @media only screen and (max-width: 600px) {
@@ -323,7 +344,7 @@ body#index {
 #section-index div#gridContainer_project {
   font: 24px "Apercu";
   font-weight: 300;
-  color: #000000;
+  color: #555;
   line-height: 160%;
   margin: auto;
   color: #8E90A2;
@@ -383,11 +404,6 @@ body#index {
 body#about {
   grid-template-rows: 120px auto 180px;
 }
-@media only screen and (max-width: 430px) {
-  body#about {
-    grid-template-rows: 140px auto 180px;
-  }
-}
 
 #section-about {
   width: 740px;
@@ -424,11 +440,6 @@ body#about {
 
 body#playground {
   grid-template-rows: 120px auto 180px;
-}
-@media only screen and (max-width: 430px) {
-  body#playground {
-    grid-template-rows: 140px auto 180px;
-  }
 }
 
 #section-playground {
@@ -468,7 +479,7 @@ body#playground {
   }
 }
 #section-playground h1 {
-  margin-bottom: 1%;
+  margin-bottom: 14px;
 }
 @media only screen and (max-width: 430px) {
   #section-playground h1 {
@@ -523,6 +534,11 @@ body#playground {
     width: 45%;
   }
 }
+@media only screen and (max-width: 620px) {
+  #section-playground img {
+    width: 43%;
+  }
+}
 @media only screen and (max-width: 430px) {
   #section-playground img {
     width: 100%;
@@ -538,7 +554,7 @@ body#playground {
 }
 
 #myBtnContainer {
-  margin: 3% 0 2% 0;
+  margin: 40px 0 18px 0;
 }
 @media only screen and (max-width: 430px) {
   #myBtnContainer {
@@ -554,7 +570,7 @@ body#playground {
   text-decoration: none;
   display: inline-block;
   margin-right: 4px;
-  margin-bottom: 2%;
+  margin-bottom: 12px;
   transition-duration: 0.4s;
   cursor: pointer;
 }
@@ -564,18 +580,26 @@ body#playground {
 }
 
 body {
-  font: 18px "Apercu";
+  font: 20px "Apercu";
   font-weight: 300;
-  color: #000000;
+  color: #555;
   line-height: 160%;
   letter-spacing: 0.5px;
+  color: #555;
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 620px) {
   body {
     font: 18px "Apercu";
     font-weight: 300;
-    color: #000000;
+    color: #555;
     line-height: 160%;
+    line-height: 170%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  body {
+    font-size: 18px;
+    line-height: 170%;
   }
 }
 @media only screen and (max-width: 430px) {
@@ -785,8 +809,6 @@ h4 {
 .case-study-content {
   width: 740px;
   margin: auto;
-  font-size: 20px;
-  color: #555555;
 }
 @media only screen and (max-width: 800px) {
   .case-study-content {
@@ -951,7 +973,7 @@ ul {
 /* organisms */
 header {
   width: 100%;
-  color: #333333;
+  color: #333;
 }
 header a:hover {
   color: #616580;
@@ -968,30 +990,33 @@ header #brand-logo {
     font: 26px "Archer";
   }
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 620px) {
   header #brand-logo {
     float: none;
     font-size: 28px;
   }
 }
 header nav {
-  font: 18px "Apercu";
+  font: 20px "Apercu";
   font-weight: 300;
-  color: #000000;
+  color: #555;
   line-height: 160%;
   letter-spacing: 0.5px;
+  color: #555;
+  color: #333 !important;
   padding: 10px;
   float: right;
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 620px) {
   header nav {
     font: 18px "Apercu";
     font-weight: 300;
-    color: #000000;
+    color: #555;
     line-height: 160%;
+    line-height: 170%;
   }
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 620px) {
   header nav {
     float: none;
   }
@@ -999,7 +1024,7 @@ header nav {
 header nav a {
   margin-left: 30px;
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 620px) {
   header nav a {
     margin-left: 20px;
   }
@@ -1044,11 +1069,12 @@ header nav a {
 }
 
 .dropdown-content {
-  font: 18px "Apercu";
+  font: 20px "Apercu";
   font-weight: 300;
-  color: #000000;
+  color: #555;
   line-height: 160%;
   letter-spacing: 0.5px;
+  color: #555;
   display: none;
   position: absolute;
   line-height: 140%;
@@ -1058,15 +1084,16 @@ header nav a {
   z-index: 1;
   margin: 0 -50px;
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 620px) {
   .dropdown-content {
     font: 18px "Apercu";
     font-weight: 300;
-    color: #000000;
+    color: #555;
     line-height: 160%;
+    line-height: 170%;
   }
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 620px) {
   .dropdown-content {
     margin: 0;
   }
@@ -1142,6 +1169,7 @@ footer .moving-text div {
   height: 100px;
   position: absolute;
   overflow: hidden;
+  font-weight: 300;
   -webkit-animation: marquee 15s linear infinite;
   animation: marquee 15s linear infinite;
 }
