@@ -169,7 +169,7 @@ section a:hover {
 }
 
 .float:hover {
-  background-color: #040861;
+  background-color: #555;
 }
 
 .my-float {
@@ -182,17 +182,6 @@ body {
   grid-template-rows: 70px auto 160px;
   grid-template-columns: 1fr 90% 1fr;
   grid-template-areas: "header header header" ". section ." "footer footer footer";
-}
-@media only screen and (max-width: 800px) {
-  body {
-    grid-template-columns: 1fr 90% 1fr;
-    grid-template-rows: 2% auto 4%;
-  }
-}
-@media only screen and (max-width: 430px) {
-  body {
-    grid-template-rows: 3% auto 4%;
-  }
 }
 
 header {
@@ -401,7 +390,7 @@ body#about {
 }
 
 #section-about {
-  width: 800px;
+  width: 740px;
   margin: auto;
   text-align: inherit;
 }
@@ -411,14 +400,8 @@ body#about {
   }
 }
 #section-about h1 {
-  font: 36px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  line-height: 130%;
-  font-family: "Archer";
-  font-weight: 600;
   margin-bottom: 5%;
+  color: #333333;
 }
 @media only screen and (max-width: 430px) {
   #section-about h1 {
@@ -426,30 +409,12 @@ body#about {
   }
 }
 #section-about h3 {
-  font: 24px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  line-height: 190%;
-  font-weight: 600;
   padding-bottom: 1%;
+  color: #333333;
 }
 #section-about p {
-  font: 18px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  letter-spacing: 0.5px;
-  line-height: 180%;
   margin-bottom: 5%;
-}
-@media only screen and (max-width: 430px) {
-  #section-about p {
-    font: 18px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 160%;
-  }
+  color: #555555;
 }
 @media only screen and (max-width: 430px) {
   #section-about p {
@@ -469,6 +434,27 @@ body#playground {
 #section-playground {
   margin: auto;
   width: 1200px;
+  /*
+  h1 {
+      @include body_large;
+      font-weight: 600;
+      margin-bottom: 1%;
+      @media only screen and (max-width: 430px) {
+          margin-bottom: 4%;
+      }
+      span {
+          font-family: 'Archer';
+      }
+  }
+  h3 {
+      @include body_medium;
+      font-weight: 600;
+  }
+  p {
+      @include body_small;
+      line-height: 180%;
+  }
+      */
   text-align: inherit;
 }
 @media only screen and (max-width: 1200px) {
@@ -482,12 +468,6 @@ body#playground {
   }
 }
 #section-playground h1 {
-  font: 36px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  line-height: 130%;
-  font-weight: 600;
   margin-bottom: 1%;
 }
 @media only screen and (max-width: 430px) {
@@ -495,31 +475,8 @@ body#playground {
     margin-bottom: 4%;
   }
 }
-#section-playground h1 span {
-  font-family: "Archer";
-}
-#section-playground h3 {
-  font: 24px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  font-weight: 600;
-}
 #section-playground p {
-  font: 18px "Apercu";
-  font-weight: 300;
-  color: #000000;
-  line-height: 160%;
-  letter-spacing: 0.5px;
-  line-height: 180%;
-}
-@media only screen and (max-width: 430px) {
-  #section-playground p {
-    font: 18px "Apercu";
-    font-weight: 300;
-    color: #000000;
-    line-height: 160%;
-  }
+  color: #555;
 }
 
 /* For flexbox effect */
@@ -774,9 +731,9 @@ hr {
 .more-project {
   margin: auto;
   margin-top: 80px;
-  width: 70%;
+  width: 90%;
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
   .more-project {
     width: 100%;
   }
@@ -831,7 +788,7 @@ h4 {
   font-size: 20px;
   color: #555555;
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
   .case-study-content {
     width: inherit;
   }
@@ -839,7 +796,7 @@ h4 {
 .case-study-content div {
   margin-bottom: 80px;
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
   .case-study-content div {
     margin-bottom: 50px;
   }
@@ -856,7 +813,7 @@ h4 {
   margin: 90px 0 60px 0;
   text-align: center;
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
   .case-study-title {
     margin: 60px 0 60px 0;
   }
@@ -994,6 +951,7 @@ ul {
 /* organisms */
 header {
   width: 100%;
+  color: #333333;
 }
 header a:hover {
   color: #616580;
@@ -1115,7 +1073,7 @@ header nav a {
 }
 
 .dropdown-content a {
-  color: black;
+  color: #333;
   padding: 18px 0;
   text-decoration: none;
   line-height: 156%;
@@ -1128,7 +1086,7 @@ header nav a {
   background-color: #f0efef;
   font-weight: 400;
   border: 1px solid #eaeaea;
-  color: black;
+  color: #333;
   font-size: small;
   padding: 2px 6px;
   margin-right: 4px;
@@ -1166,6 +1124,8 @@ span.tag-4 {
 
 footer {
   font-family: "Apercu";
+  color: #333333;
+  font-weight: 400;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -1189,6 +1149,9 @@ footer .moving-text span {
   float: left;
   width: 50%;
 }
+footer .footer-icon {
+  margin-left: 4px;
+}
 @-webkit-keyframes marquee {
   0% {
     left: 0;
@@ -1204,10 +1167,6 @@ footer .moving-text span {
   100% {
     left: -100%;
   }
-}
-
-.footer-icon {
-  width: 18px;
 }
 
 /* sass --watch base.scss style.css */
