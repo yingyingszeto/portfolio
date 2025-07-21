@@ -14,6 +14,18 @@ body#playground {
     @media only screen and (max-width: 800px) {
         width: 100%;
     }
+
+    h1 {
+         margin-bottom: 1%;
+        @media only screen and (max-width: 430px) {
+            margin-bottom: 4%;
+        }
+    }
+
+    p {
+        color: #555;
+    }
+    /*
     h1 {
         @include body_large;
         font-weight: 600;
@@ -33,6 +45,7 @@ body#playground {
         @include body_small;
         line-height: 180%;
     }
+        */
    
     text-align: inherit;
 }
