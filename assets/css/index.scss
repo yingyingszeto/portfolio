@@ -1,7 +1,11 @@
 body#index {
     grid-template-rows: 80px auto $page-bottom-space;
+
+    @media only screen and (max-width: 620px) {
+        grid-template-rows: 140px auto 60px;
+    }
     @media only screen and (max-width: 430px) {
-        grid-template-rows: 100px auto $page-bottom-space;
+        grid-template-rows: 100px auto 120px;
     }
 }
 
@@ -19,6 +23,7 @@ body#index {
 
     div#gridContainer_intro {
         margin: auto;
+        color: $title-color;
         span { font-weight: 600; }
         @media only screen and (max-width: 475px) {
             font-size: 8vw;
@@ -26,6 +31,9 @@ body#index {
 
         p:first-child {
             font-size: 48px;
+            @media only screen and (max-width: 620px) {
+                font-size: 44px;
+            }
             @media only screen and (max-width: 430px) {
                 font-size: 38px;
             }
@@ -59,7 +67,7 @@ body#index {
                     font-size: 8vw;
                 }
 
-                color: $color_primary;
+                color: $body-color;
                 padding: 3%;
                 :hover {
                     @include hover-link;
