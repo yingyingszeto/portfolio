@@ -1,5 +1,7 @@
 footer {
     font-family: $font_body;
+    color: #333333;
+    font-weight: 400;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -25,6 +27,12 @@ footer {
         float: left;
         width: 50%;
     }
+
+.footer-icon {
+    margin-left: 4px;   
+}
+
+
       
     @-webkit-keyframes marquee {
         0% { left: 0; }
@@ -37,6 +45,3 @@ footer {
     }
 }
 
-.footer-icon {
-    width: 18px;
-}
