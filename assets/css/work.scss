@@ -3,6 +3,10 @@ $section-between-space-responsive: 80px;
 
 body {
   @include body_small;
+  @media only screen and (max-width: 620px) {
+      font-size: 18px;
+      line-height: 170%;
+    }
     @media only screen and (max-width: 430px) {
         grid-template-rows: 130px auto $page-bottom-space;
         line-height: 180%;
@@ -216,9 +220,6 @@ h4 {
   @media only screen and (max-width: 800px) {
     width: inherit;
   }
-  
-  font-size: 20px;
-  color:#555555;
 
   div { 
     margin-bottom: 80px;
