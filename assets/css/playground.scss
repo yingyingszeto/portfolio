@@ -1,8 +1,5 @@
 body#playground {
     grid-template-rows: $page-top-space auto $page-bottom-space;
-     @media only screen and (max-width: 430px) {
-        grid-template-rows: 140px auto $page-bottom-space;
-    }
 }
 
 #section-playground {
@@ -16,7 +13,7 @@ body#playground {
     }
 
     h1 {
-         margin-bottom: 1%;
+         margin-bottom: 14px;
         @media only screen and (max-width: 430px) {
             margin-bottom: 4%;
         }
@@ -94,6 +91,9 @@ body#playground {
         @media only screen and (max-width: 1200px) {
             width: 45%;
         }
+        @media only screen and (max-width: 620px) {
+            width: 43%;
+        }
         @media only screen and (max-width: 430px) {
             width: 100%;
         }
@@ -109,7 +109,7 @@ body#playground {
 }
 
 #myBtnContainer {
-    margin: 3% 0 2% 0;
+    margin: 40px 0 18px 0;
 
     @media only screen and (max-width: 430px) {
         margin: 4% 0;
@@ -124,7 +124,7 @@ body#playground {
         text-decoration: none;
         display: inline-block;
         margin-right: 4px;
-        margin-bottom: 2%;
+        margin-bottom: 12px;
         transition-duration: 0.4s;
         cursor: pointer;
     }
