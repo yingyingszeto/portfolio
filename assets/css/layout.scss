@@ -8,13 +8,6 @@ body {
     "header header header"
     ". section ."
     "footer footer footer";
-    @media only screen and (max-width: 800px) {
-        grid-template-columns: 1fr 90% 1fr;
-        grid-template-rows: 2% auto 4%;
-    }
-    @media only screen and (max-width: 430px) {
-        grid-template-rows: 3% auto 4%;
-    }
 }
 
 header {
