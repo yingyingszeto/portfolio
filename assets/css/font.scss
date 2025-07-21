@@ -7,7 +7,7 @@ $font_body: 'Apercu';
 @mixin body($size) {
     font: $size $font_body;
     font-weight: 300;
-    color: $color_primary;
+    color: $body-color;
     line-height: 160%;
 }
 
@@ -32,10 +32,12 @@ $font_body: 'Apercu';
 }
 
 @mixin body_small {
-    @include body(18px);
+    @include body(20px);
     letter-spacing: .5px;
-     @media only screen and (max-width: 430px) {
+    color: #555;
+    @media only screen and (max-width: 620px) {
         @include body(18px);
+        line-height: 170%;
     }
 }
 
