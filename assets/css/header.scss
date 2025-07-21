@@ -1,5 +1,6 @@
 header {
     width: 100%;
+    color: #333333;
     a:hover {
         @include hover-link;
     }
@@ -91,7 +92,7 @@ nav a:first-child {
 
 .dropdown-content { 
     a {
-        color: black;
+        color: #333;
         padding: 18px 0;
         text-decoration: none;
         line-height: 156%;
@@ -104,7 +105,7 @@ nav a:first-child {
             background-color: $palegrey;
             font-weight: 400;
             border: 1px solid $lightgrey;
-            color: black;
+            color: #333;
             font-size: small;
             padding: 2px 6px;
             margin-right: 4px;
