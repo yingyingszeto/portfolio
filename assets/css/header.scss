@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    color: #333333;
+    color: $title-color;
     a:hover {
         @include hover-link;
     }
@@ -12,21 +12,22 @@ header {
         @media only screen and (max-width: 800px) {
             font: 26px $font_brand;
         }
-        @media only screen and (max-width: 430px) {
+        @media only screen and (max-width: 620px) {
             float: none;
             font-size: 28px;
         }
     }
     nav {
         @include body_small;
+        color: $title-color !important;
         padding: 10px;
         float: right;
-        @media only screen and (max-width: 430px) {
+        @media only screen and (max-width: 620px) {
             float: none;
         }
         a {
             margin-left: 30px;
-            @media only screen and (max-width: 430px) {
+            @media only screen and (max-width: 620px) {
                 margin-left: 20px;
             }
         }
@@ -85,7 +86,7 @@ nav a:first-child {
     z-index: 1;
     margin: 0 -50px;
 
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 620px) {
             margin: 0;
         }
 }
