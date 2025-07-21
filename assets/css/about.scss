@@ -1,8 +1,5 @@
 body#about {
     grid-template-rows: $page-top-space auto $page-bottom-space;
-    @media only screen and (max-width: 430px) {
-        grid-template-rows: 140px auto $page-bottom-space;
-    }
 }
 
 #section-about {
