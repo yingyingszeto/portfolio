@@ -19,6 +19,7 @@ header {
     }
     nav {
         @include body_small;
+        font-size: 18px;
         color: $title-color !important;
         padding: 10px;
         float: right;
@@ -77,6 +78,7 @@ nav a:first-child {
 
 .dropdown-content {
   @include body_small;
+  font-size: 18px;
     display: none;
     position: absolute;
     line-height: 140%;
