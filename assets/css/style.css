@@ -1003,6 +1003,7 @@ header nav {
   line-height: 160%;
   letter-spacing: 0.5px;
   color: #555;
+  font-size: 18px;
   color: #333 !important;
   padding: 10px;
   float: right;
@@ -1075,6 +1076,7 @@ header nav a {
   line-height: 160%;
   letter-spacing: 0.5px;
   color: #555;
+  font-size: 18px;
   display: none;
   position: absolute;
   line-height: 140%;
